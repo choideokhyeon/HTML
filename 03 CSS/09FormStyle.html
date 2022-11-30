@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      font-family: sans-serif; /* 테이블 기본 글꼴 */
+      border: 1.5px solid lightgrey; /* 테두리 굵기 실선 색상 */
+      text-align: left; /* 텍스트 배치 형태 */
+      font-size: 0.8rem; /* 텍스트 크기 */
+      border-collapse:collapse; /* 셀과 테두리 병합*/
+      margin-bottom: 10px; /* 테이블간 간격 */
+      border-right: 0px /* 오른쪽 테두리 제거 */
+    }
+
+    caption {
+      text-align: left; /* 테이블 제목 */
+      font-weight: 800; /* 텍스트 굵기 */
+      margin-bottom: 10px; /* 아래 태그와의 마진(간격) */
+    }
+
+    td,
+    th {
+      border: 1px solid lightgrey; 
+      text-align: left;
+      padding: 10px; /* content와 테두리 사이의 거리 */
+    }
+
+    td {
+      border-right: 0px;
+    }
+
+    th {
+      background-color: rgb(222, 227, 227);
+      width:150px
+    }
+
+    span {
+      font-size: 0.7rem;
+    }
+
+    .txtinput {
+      box-sizing: border-box; /* 블럭크기 계산시(Content+padding+테두리굵기의 합) */
+      width: 150px;
+      height: 20px;
+      border: 1px solid lightgrey;
+    }
+
+    input:focus {
+      outline: 2px dashed gray;
+    }
+
+    .check{
+      margin-top:10px;
+    }
+    
+  </style>
+
+</head>
+
+<body>
+
+  <hr>
+  <table>
+    <caption>사이트 이용정보 입력</caption>
+    <tr>
+      <th>아이디</th>
+      <td>
+        <span>영문자, 숫자, _만 입력가능,최소 3자이상 입력하세요</span><br>
+        <input class="txtinput" type="text" style="margin-top:10px"></td>
+    </tr>
+    <tr>
+      <th>비밀번호</th>
+      <td><input class="txtinput" type="password"></td>
+    </tr>
+    <tr>
+      <th>비밀번호 확인</th>
+      <td><input class="txtinput" type="password"></td>
+    </tr>
+  </table>
+
+  <table>
+    <caption>개인정보 입력</caption>
+    <tr>
+      <th>이름</th>
+      <td><input class="txtinput" type="text"></td>
+    </tr>
+    <tr>
+      <th>닉네임</th>
+      <td>
+        <span>공백없이 한글,영문,숫자만 입력가능 (한글2자, 영문4자 이상)<br>닉네임을 바꾸시면 앞으로 60일 이내에는 변경 할 수 없습니다</span><br>
+        <input class="txtinput" type="text" style="margin-top:10px">
+      </td>
+    </tr>
+    <tr>
+      <th>E-mail</th>
+      <td><input class="txtinput" type="text"></td>
+    </tr>
+  </table>
+
+  <table>
+    <caption>기타 개인설정</caption>
+    <tr>
+      <th>메일링서비스</th>
+      <td>
+        <input class="check" type="checkbox">정보 메일을 받겠습니다.
+      </td>
+    </tr>
+    <tr>
+      <th>정보공개</th>
+      <td>
+        <span>정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 불가능합니다.</span><br>
+        <input class="check" type="checkbox">다른분들이 나의 정보를 볼 수 있도록 합니다.
+      </td>
+    </tr>
+    <tr>
+      <th>자동등록방지</th>
+      <td><input class="txtinput" type="text"></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

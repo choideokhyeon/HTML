@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  /*
+    width : auto; 최대한 넓게(기본)
+    height : auto; 최소한 높이(기본)-미설정시 표시x
+
+    max-width : 최대넓이
+    max-height : 최대높이
+
+    min-width : 최소넓이
+    min-height : 최소높이
+  */
+
+  .parent{
+    width:300px;
+    /* width: 50%; */
+    height:200px;
+    /* height:auto; */
+    background-color: black;
+  }
+  .child{
+    /* width: auto; */
+    /* width:100%; */
+    /* max-width:200px; */
+    min-width: 500px;
+    height: 100px;
+    background-color: yellow;
+  }
+</style>
+
+</head>
+<body>
+
+  <div class="parent">
+    <div class="child">
+    
+    </div>
+  </div>
+</body>
+</html>

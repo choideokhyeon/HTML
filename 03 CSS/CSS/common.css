@@ -1,0 +1,7 @@
+/* @import url 사용 */
+@import "a.css";
+div{
+  font-family:메이플스토리;
+  color:red;
+  background-color: black;
+}
