@@ -1,102 +1,175 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    a{
+    a {
       text-decoration: none;
     }
 
-    #a1{
+    #a1 {
       display: block;
       width: 100px;
       height: 35px;
       background-color: tomato;
-      color:white;
-      border-radius:10px;
-      text-align:center;
-      line-height: 35px;
-      margin-bottom: 10px;
-    }
-
-    #a2{
-      display: block;
-      width:100px;
-      height: 35px;
-      background-color: black;
-      color:red;
+      color: white;
       border-radius: 10px;
       text-align: center;
       line-height: 35px;
       margin-bottom: 10px;
     }
 
-    a{
+    #a2 {
+      display: block;
+      width: 100px;
+      height: 35px;
+      background-color: black;
+      color: red;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 35px;
+      margin-bottom: 10px;
+    }
+
+    a {
       display: block;
       width: 100px;
       height: 35px;
       background-color: yellow;
-      color:blue;
-      border-radius:10px;
-      text-align:center;
+      color: blue;
+      border-radius: 10px;
+      text-align: center;
       line-height: 35px;
     }
 
-    #a1:hover{ /* hover : 마우스를 올렸을때 상황 */
+    #a1:hover {
+      /* hover : 마우스를 올렸을때 상황 */
       opacity: 0.7;
     }
 
-    #a1:active{ /* active : 눌렀을때 상황 */
+    #a1:active {
+      /* active : 눌렀을때 상황 */
       font-weight: 600;
-      font-size:1.2rem;
+      font-size: 1.2rem;
     }
 
-    #a1:visited{  /* visited : 한번이라도 방문 했을때 상황 */
-      color:gray;
+    #a1:visited {
+      /* visited : 한번이라도 방문 했을때 상황 */
+      color: gray;
     }
 
-    #a:link{  /* link : 한번도 클릭하지 않은 상황 */
-      color : blueviolet;
+    #a:link {
+      /* link : 한번도 클릭하지 않은 상황 */
+      color: blueviolet;
     }
 
-    #a2:hover{
-      color:yellow;
+    #a2:hover {
+      color: yellow;
     }
 
-    #a2:active{
+    #a2:active {
       background-color: yellow;
-      color:black;
+      color: black;
     }
 
-    #a2:visited{
-      color:white;
+    #a2:visited {
+      color: white;
     }
 
 
 
-    #txt{
-      border:1px solid orange;
-      border-radius: 10px;
+    #txt {
+      border: 1px solid orange;
     }
-    #txt:focus{
-      border:1px;
-      outline:2px dashed gray;
-      background-image: linear-gradient(to right,red,orange,yellow,green,blue,navy,purple);
+
+    #txt:focus {
+      border: 1px;
+      outline: 1px dashed gray;
+      border: 1px solid transparent;
+      background-image: linear-gradient(to right, red, orange, yellow, green, blue, navy, purple);
       border-image-slice: 1;
     }
 
+
+    div {
+      width: 200px;
+      transition: 0.5s;
+      border-bottom: 1px solid;
+    }
+
+    div:hover {
+      width: 200px;
+      border-bottom: 1px solid transparent;
+      border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
+      border-image-slice: 1;
+    }
+
+    /* 참고 */
+
+    input[type="checkbox"]:checked+label {
+      background-color: green;
+      color: white;
+    }
+
+    #txt2:disabled {
+      background-color: beige;
+    }
+
+    #chk2:checked+#txt2{
+      font-family: 메이플스토리;
+    }
   </style>
 </head>
+
 <body>
 
   <a href="https://map.google.com" id="a1" target="_blank">google</a>
   <a href="https://map.naver.com" id="a2" target="_blank">naver</a>
   <a href="">TEST</a>
   <hr>
+
   <input id="txt">
+  <hr>
+
+  <div>
+    <input type="text" style="outline:0px;border:0px;">
+  </div>
+  <hr>
+
+  <div>
+    <input type="checkbox"><label>체크박스</label>
+  </div>
+  <hr>
+
+  <section>
+    <input type="checkbox"><label>체크박스</label>
+  </section>
+  <hr>
+
+  <input type="checkbox" id="chk2">
+  <input type="text" id="txt2" disabled>
 
 </body>
+
+<script>
+  chktg = document.getElementById("chk2");
+  txttg = document.getElementById("txt2");
+  chktg.addEventListener('change',function(){
+    if(this.checked)
+    {
+      //텍스트 활성화
+      txttg.disabled=false;
+    }
+    else{
+      //텍스트 비활성화
+      txttg.value=""; //내용 초기화
+      txttg.disabled=true;
+    }
+  })
+</script>
+
 </html>

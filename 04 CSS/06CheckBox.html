@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+  <style>
+    div{
+      display: flex;
+      align-items: center;
+    }
+    input[type="checkbox"]{
+      display:none;
+    }
+    input[type="checkbox"]+label{
+      display:inline-block;
+      width: 20px;
+      height: 20px;
+      border:1px solid darkgray;
+      background-image: url(img/android.svg);
+      background-repeat: no-repeat;
+      background-size:100%;
+    }
+    input[type="checkbox"]:checked+label{
+      background-image: url(img/apple.svg);
+      /* background-repeat: no-repeat;
+      background-size:100%; */
+    }
+
+
+
+    input[type="radio"]
+    {
+      display:none;
+    }
+
+    input[type="radio"]+label{
+      display:inline-block;
+      width:30px;
+      height: 30px;
+      border:1px solid gray;
+      background-image: url(img/ckbefore.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    input[type="radio"]:checked+label{
+      background-image: url(img/ckafter.svg);
+    }
+    #rd1:checked{
+      
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="checkbox" id="chk">
+    <label for="chk"></label>&nbsp;<span>안드로이드 vs 애플</span>
+  </div>
+  <div>
+    <input type="checkbox" id="chk2">
+    <label for="chk2"></label>&nbsp;<span>안드로이드 vs 애플</span>
+  </div>
+  <div>
+    <input type="checkbox" id="chk3">
+    <label for="chk3"></label>&nbsp;<span>안드로이드 vs 애플</span>
+  </div>
+  <hr>
+
+  <div>
+    <input type="radio" id="rd1" name="rdck">
+    <label for="rd1"></label> ANA
+
+    <input type="radio" id="rd2" name="rdck">
+    <label for="rd2"></label> JAL
+  </div>
+</body>
+</html>
