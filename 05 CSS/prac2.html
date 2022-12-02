@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height:3000px;
+    }
+    ul {
+      list-style: none;
+      padding: 0px;
+      display: flex;
+      text-decoration: none;
+      justify-content: space-evenly;
+      font-family: 메이플스토리;
+      margin-bottom: 50px;
+    }
+
+    li * {
+      text-decoration: none;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+    }
+
+    .submenu>li {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: auto;
+      font-size: 0.8rem;
+      float: left;
+    }
+
+    .submenu>li>a {
+      float: left;
+      position: relative;
+      color: gray;
+      margin: 5px
+    }
+
+    .menu>li>a {
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 10px;
+      width: auto;
+      color: black;
+    }
+
+    .menu>li:hover #sub1 {
+      display: block;
+    }
+    .menu>li:hover #sub2 {
+      display: block;
+    }
+    .menu>li:hover #sub3 {
+      display: block;
+    }
+    .menu>li:hover #sub4 {
+      display: block;
+    }
+    .menu>li:hover #sub5 {
+      display: block;
+    }
+    .menu>li:hover #sub6 {
+      display: block;
+    }
+    .menu>li:hover #sub7 {
+      display: block;
+    }
+
+    /* .menu>li:hover>a{
+      color:skyblue;
+    } */
+
+    .submenu>li:hover>a {
+      color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <hr>
+  <ul class="menu">
+    <li>
+      <a href="" class="c1">아카데미 소개</a>
+      <ul class="submenu" id="sub1">
+        <div class="container">
+          <li><a href="">코리아IT 소개</a></li>
+          <li><a href="">히스토리</a></li>
+          <li><a href="">언론보도</a></li>
+          <li><a href="">강사소개</a></li>
+          <li><a href="">교육시설안내</a></li>
+          <li><a href="">오시는 길</a></li>
+          <li><a href="">학생관리</a></li>
+        </div>
+      </ul>
+    </li>
+    <li>
+      <a href="">IT 교육과정</a>
+      <ul class="submenu" id="sub2">
+        <div class="container">
+          <li><a href="">기초 코딩</a></li>
+          <li><a href="">웹/앱개발</a></li>
+          <li><a href="">빅데이터,AI</a></li>
+          <li><a href="">정보보안 전문가</a></li>
+          <li><a href="">스킬업 단과</a></li>
+          <li><a href="">자격증 과정</a></li>
+          <li><a href="">네트워크 관리자</a></li>
+          <li><a href="">서버 관리자</a></li>
+          <li><a href="">강사취업사관학교</a></li>
+        </div>
+      </ul>
+    </li>
+    <li>
+      <a href="">국비지원 과정</a>
+      <ul class="submenu" id="sub3">
+        <div class="container">
+          <li><a href="">국비지원 교육과정</a></li>
+          <li><a href="">실업자 국비과정 안내</a></li>
+          <li><a href="">재직자 국비과정 안내</a></li>
+          <li><a href="">과정평가형 과정</a></li>
+          <li><a href="">신사업 국비과정</a></li>
+          <li><a href="">국비지원과정 조회하기</a></li>
+        </div>
+      </ul>
+    </li>
+    <li>
+      <a href="">커뮤니티</a>
+      <ul class="submenu" id="sub4">
+        <div class="container">
+          <li><a href="">코리아IT 소개</a></li>
+          <li><a href="">히스토리</a></li>
+          <li><a href="">언론보도</a></li>
+          <li><a href="">강사소개</a></li>
+          <li><a href="">교육시설안내</a></li>
+          <li><a href="">오시는 길</a></li>
+          <li><a href="">학생관리</a></li>
+        </div>
+      </ul>
+    </li>
+    <li>
+      <a href="">프로젝트</a>
+      <ul class="submenu" id="sub5">
+        <div class="container">
+          <li><a href="">코리아IT 소개</a></li>
+          <li><a href="">히스토리</a></li>
+          <li><a href="">언론보도</a></li>
+          <li><a href="">강사소개</a></li>
+          <li><a href="">교육시설안내</a></li>
+          <li><a href="">오시는 길</a></li>
+          <li><a href="">학생관리</a></li>
+        </div>
+      </ul>
+    </li>
+    <li>
+      <a href="">취업지원센터</a>
+      <ul class="submenu" id="sub6">
+        <div class="container">
+          <li><a href="">코리아IT 소개</a></li>
+          <li><a href="">히스토리</a></li>
+          <li><a href="">언론보도</a></li>
+          <li><a href="">강사소개</a></li>
+          <li><a href="">교육시설안내</a></li>
+          <li><a href="">오시는 길</a></li>
+          <li><a href="">학생관리</a></li>
+        </div>
+      </ul>
+    </li>
+    <li>
+      <a href="">고객상담센터</a>
+      <ul class="submenu" id="sub7">
+        <li><a href="">코리아IT 소개</a></li>
+        <li><a href="">히스토리</a></li>
+        <li><a href="">언론보도</a></li>
+        <li><a href="">강사소개</a></li>
+        <li><a href="">교육시설안내</a></li>
+        <li><a href="">오시는 길</a></li>
+        <li><a href="">학생관리</a></li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+</body>
+
+</html>

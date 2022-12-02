@@ -1,0 +1,48 @@
+body{
+  height: 3000px;
+  background-color: orange;
+}
+
+ul{
+  list-style: none;
+  padding: 0px;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  border: 1px solid gray;
+}
+
+.menu>li{
+  position: relative;
+}
+
+.submenu{
+  display: none;
+  position: absolute;
+  left:0px
+}
+
+.menu>li:hover .submenu{
+  display: block;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+#ball{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: azure;
+  box-shadow:5px 5px 5px 0;
+  position: fixed;
+  left: 80%;
+  top:85%; 
+}

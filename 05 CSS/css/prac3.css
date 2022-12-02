@@ -1,0 +1,51 @@
+ul{
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  font-family: Yomogi;
+}
+
+img{
+  margin-right: 100px;
+}
+
+.menu{
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: space-evenly;
+}
+
+li *{
+  text-decoration: none;
+  color:black;
+}
+
+
+.submenu{
+  display: none;
+  position:absolute;
+  border:1px solid rgb(200,200,200);
+  text-align: center;
+  font-size: 0.7rem;
+  width: 120px;
+  transform: translateX(-20px);
+  background-color: rgb(230, 230, 230);
+  margin-top: 10px;
+}
+
+.submenu>li{
+  border:1px solid rgb(200,200,200);
+  height: 25px;
+  line-height: 25px;
+}
+
+.menu>li:hover .submenu{
+  display: block;
+}
+
+.submenu>li>a:hover .submenu>li{
+  color:white;
+  background-color: gray;
+}

@@ -1,0 +1,53 @@
+*{
+  font-size: 20px;
+  font-family: 메이플스토리;
+}
+
+body{
+  background-color: orange;
+  height: 3000px;
+}
+
+ul{
+  list-style: none;
+  padding: 0px;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.depth1{
+  margin:0px auto;
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 140px;
+  width: 1000px;
+  height: 140px;
+  border: 1px solid gray;
+  position: relative;
+  background-color: white;
+  text-align: left;
+  position: fixed;
+}
+
+.depth2{
+  display: none;
+  position: absolute;
+  border-top: 2px solid gray;
+}
+
+.depth2>li{
+  height: 50px;
+  line-height: 50px;
+}
+
+.depth1:hover{
+  height: 500px;
+}
+
+.depth1:hover .depth2{
+  display: block;
+  background-color: white;
+}

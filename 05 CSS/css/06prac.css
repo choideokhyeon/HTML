@@ -1,0 +1,186 @@
+/* *{
+  text-align: center;
+  font-family: 메이플스토리;
+}
+
+ul{
+  list-style:none;
+  padding-left:0px;
+}
+
+a{
+  display: block;
+  color:black;
+}
+
+.gnbDepth1{
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  width: 1200px;
+}
+
+.gnbDepth1>li>a{
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.gnbDepth1>li:hover .gnbDepth2{
+  display:flex;
+  justify-content: space-around;
+}
+
+.gnbDepth2{
+  display: none;
+  position:absolute;
+  border:1px solid gray;
+
+  left:0px;
+  width: auto;
+  height:64px;
+  line-height: 64px;
+}
+
+.gnbDepth2-list{
+  justify-content: space-around;
+  display:flex;
+  width:1200px;
+}
+
+.gnbDepth2-list>li>a{
+  display: block;
+  text-decoration: none;
+  color:black;
+}
+
+.gnb2-tit{
+  display: none;
+} */
+
+ul{
+  list-style:none;
+  font-family: 메이플스토리;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+#gnb {
+  display: flex;
+  position: relative;
+  height: 65px;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+#gnb>.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: none;
+}
+
+.topLogo {
+  display: inline-block;
+  width: 140px;
+  height: 85px;
+}
+
+.topLogo a {
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+  background-image: url('/renewal2021/img/common/logo_header.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.gnbDepth1 {
+  display: flex;
+  margin-right: 0px;
+  font-size: 16px;
+}
+
+.gnbDepth1>li {
+  padding: 0 20px;
+  font-weight: 700;
+  min-width: fit-content;
+}
+
+.gnbDepth1>li:nth-child(1) {
+  padding-left: 0;
+}
+
+.gnbDepth1>li:hover .gnbDepth2 {
+  display: block;
+}
+
+.gnbDepth1>li.on,
+.gnbDepth1>li:hover {
+  color: #004eff;
+}
+
+.gnbDepth1>li.on>a,
+.gnbDepth1>li:hover>a {
+  border-bottom: 3px solid;
+}
+
+.gnbDepth1>li>a {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding: 0 3px;
+}
+
+.gnbDepth2 {
+  display: none;
+  position: absolute;
+  top: 101%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 22px 0 22px;
+  background: #fff;
+  color: #000001;
+  box-shadow: 0px 11px 10px 0px rgba(13, 14, 21, 0.2);
+  -webkit-box-shadow: 0px 11px 10px 0px rgba(13, 14, 21, 0.2);
+  -moz-box-shadow: 0px 11px 10px 0px rgba(13, 14, 21, 0.2);
+}
+
+.gnbDepth2>.container {
+  display: flex;
+  align-items: center;
+  overflow: inherit;
+}
+
+.gnbDepth2-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+}
+
+.gnbDepth2-list>li {
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.gnbDepth2-list>li:hover {
+  color: #004eff;
+}
+
+.gnbDepth2-list>li>a {
+  vertical-align: middle;
+}
+
+.gnb2-tit {
+  width: 200px;
+  font-weight: 700;
+  font-size: 20px;
+  display: none;
+}

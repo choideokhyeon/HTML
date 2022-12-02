@@ -1,0 +1,36 @@
+body {
+  height: 3000px;
+}
+
+div {
+  border: 1px solid gray;
+  height: 30px;
+  width: auto;
+}
+
+#box {
+  width: 500px;
+  height: 500px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+#d1{
+  position: relative;
+}
+
+#d2{
+  position: absolute;
+}
+
+#d3{
+  position: sticky;
+  top:0px;
+}
+
+#d4{
+  position: fixed;
+  left:400px
+}
