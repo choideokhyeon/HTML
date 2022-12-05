@@ -1,0 +1,176 @@
+ul{
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  text-decoration: none;
+  font-family: Yomogi;
+}
+
+.menu{
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: space-evenly;
+  white-space:nowrap;
+}
+
+li *{
+  text-decoration: none;
+  color:black;
+}
+
+
+.submenu{
+  display: none;
+  position:absolute;
+  border:1px solid rgb(200,200,200);
+  text-align: center;
+  font-size: 0.7rem;
+  width: 120px;
+  transform: translateX(-20px);
+  background-color: rgb(230, 230, 230);
+  z-index: 1;
+  margin-top: 5px;
+  overflow:hidden;
+}
+
+.submenu>li{
+  border:1px solid rgb(200,200,200);
+  height: 25px;
+  line-height: 25px;
+}
+
+.menu>li>a:hover{
+  color:gray;
+}
+
+.menu>li:hover .submenu{
+  display: block;
+}
+
+.submenu>li:hover{
+  background-color: gray;
+}
+
+.submenu>li:hover>a{
+  color:white
+}
+
+.bnr_info{
+  position:absolute;
+  width: 100%;
+  height: auto;
+}
+
+.title_info{
+  position:relative;
+  display: block;
+  margin: auto;
+}
+
+.bnr_works{
+  position:absolute;
+  width: 100%;
+}
+
+.title_works{
+  position:relative;
+  display: block;
+  margin: auto;
+}
+
+.bnr_press{
+  position:absolute;
+  width: 100%;
+}
+
+.title_press{
+  position:relative;
+  display: block;
+  margin: auto;
+}
+
+.bnr_csr{
+  position:absolute;
+  width: 100%;
+}
+
+.title_csr{
+  position:relative;
+  display: block;
+  margin: auto;
+  top:60px
+}
+
+
+#info1{
+  position:relative;
+  margin-top: auto;
+  margin-left:20px
+}
+
+.text1{
+  display: block;
+  margin:auto;
+}
+
+#info2{
+  justify-content: space-evenly;
+}
+
+.submenu2{
+  position: relative;
+  justify-content: space-evenly;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 100px;
+}
+
+.submenu2>li{
+  width:200px;
+  margin:10px;
+  border-bottom: 2px solid black;
+}
+
+.submenu2>li:hover{
+  color:gray;
+  border-bottom: 2px solid gray;
+}
+
+.submenu2>li:hover a{
+  color:gray;
+  border-bottom: 2px solid gray;
+}
+
+.games>*{
+  /* width:80%; */
+  display:flex;
+  position: relative;
+}
+
+.prev{
+  position: absolute;
+  left : 5%;
+  z-index: 1;
+}
+
+.next{
+  position: absolute;
+  left : 89%;
+  z-index: 1;
+}
+
+.vision_text{
+  text-align: left;
+}
+
+table{
+  width:1000px
+}
+
+tr>th{
+  padding:20px;
+}
+
+th>p{
+  border:1px double black;
+}
