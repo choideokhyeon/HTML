@@ -1,0 +1,49 @@
+nav{
+  height : 100px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+nav > *{
+  border: 1px solid gray;
+  height: 50px;
+  flex: 1 0 100px;
+}
+
+nav>.leftmenu{
+  flex-grow:2;
+}
+
+nav>.center{
+  flex-grow:1;
+  align-self: stretch;
+  height: 100%;
+
+  /* 로고 중앙 배치 */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* position 로고 중앙배치 */
+  position: relative;
+}
+
+nav  img{
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  display: block;
+  position: absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin: auto;
+}
+
+nav>.rightmenu{
+  flex-grow:2;
+}

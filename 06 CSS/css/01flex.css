@@ -1,0 +1,64 @@
+div{
+  border : 1px solid;
+}
+
+.parent1{
+  height: 50px;
+
+  /* 기본값 : 내부 items 가로배치 */
+  display: flex;
+
+  /* items 방향 지정 : row, row-reverse, column, column-reverse */
+  flex-direction: row;
+
+  /* items 수평 배열 형태 */
+  justify-content: space-evenly;
+
+  /* items 수직 배치 형태 */
+  align-items: center;
+}
+
+.parent1>.child{
+  height:30px;
+}
+
+/* -------------------------------------- */
+
+.parent2{
+  height: 500px;
+
+  /* 기본값 : 내부 items 가로배치 */
+  display: flex;
+
+  /* items 방향 지정 : row, row-reverse, column, column-reverse */
+  flex-direction: row;
+
+  /* items 수평 배열 형태 */
+  justify-content: space-evenly;
+
+  /* items 수직 배치 형태 */
+  align-items: center;
+
+  /* item 줄바꿈하기 */
+  flex-wrap: wrap;
+
+  /* 교차축 정렬방식, wrap이후 설정 가능 */
+  align-content: stretch;
+}
+
+.parent2>.child{
+  /* height:30px; */
+  width:150px;
+}
+
+.parent2>.child:nth-child(1){
+  align-self: flex-end;
+}
+
+.parent2>.child:nth-child(2){
+  align-self: flex-start;
+}
+
+.parent2>.child:nth-child(3){
+  align-self: stretch;
+}

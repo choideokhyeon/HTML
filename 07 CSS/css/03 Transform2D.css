@@ -1,0 +1,24 @@
+div{
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  margin: 100px;
+  background: orange;
+  transition:2s;
+}
+
+div:active{
+  /* translate(x,y) : x,y축 거리만큼 이동*/
+  /* transform:translate(150px,150px); */
+
+  /* rotate(deg) : 각도만큼 회전
+  /* transform:rotate(45deg); */
+
+  /* scale(가로,세로) : 확대 */
+  /* transform : scale(2,2); */
+
+  /* skew(가로,세로) : 기울이기 : */
+  /* transform: skew(20deg, 20deg); */
+
+  transform : translate(150px,150px) rotate(45deg) scale(2,2) skew(20deg, 20deg);
+}

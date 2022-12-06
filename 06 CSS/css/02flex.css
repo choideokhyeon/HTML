@@ -1,0 +1,38 @@
+div{
+  border:1px solid;
+}
+
+.parent{
+  height: 700px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+/* flex-grow : item 마다의 증가 크기 비율 */
+
+/* .item:nth-child(1){
+  flex-grow: 1;
+}
+
+.item:nth-child(2){
+  flex-grow: 2;
+} */
+
+.item{
+  height:50px;
+  /* item 증가 비율 */
+  /* flex-grow:1; */
+
+  /* item 감소 비율 */
+  /* flex-shrink: 0; */
+
+  /* 기본 item 크기 */
+  /* flex-basis: 250px; */
+
+  /* grow shrink basis 한번에 쓰기 */
+  /* flex : 1 0 300px; */
+
+  flex : 1 0 40%;
+  
+}

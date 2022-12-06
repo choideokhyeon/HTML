@@ -1,0 +1,23 @@
+#chk{
+  display: none;
+}
+
+#sitemenu span{
+  width:35px;
+  height: 5px;
+  background-color: gray;
+  display: block;
+  margin:5px;
+  transition:500ms;
+  opacity: 1;
+}
+
+input[type='checkbox']:checked+label #middle{
+  opacity: 0;
+}
+input[type='checkbox']:checked+label #top{
+  transform:translate(0px, 10px) rotate(45deg);
+}
+input[type='checkbox']:checked+label #bottom{
+  transform:translate(0px, -10px) rotate(-45deg);
+}
