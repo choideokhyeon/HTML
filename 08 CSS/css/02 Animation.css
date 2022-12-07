@@ -1,0 +1,55 @@
+div{
+  width: 400px;
+  height: 40px;
+  border: 3px solid orange;
+  text-align: center;
+  line-height: 40px;
+  display: flex;
+  transform: translate(50%);
+}
+
+.d1{
+  animation-name: moving1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.d2{
+  animation-name: moving2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.d3{
+  animation-name: moving3;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes moving1{
+  /* 시작*/
+  from{margin-left:100%;}
+
+  /* 끝 */
+  to{margin-left:0%;}
+}
+
+@keyframes moving2{
+  /* 시작*/
+  from{margin-top:100%;}
+
+  /* 끝 */
+  to{margin-top:0%;}
+}
+
+@keyframes moving3{
+  /* 시작*/
+  from{transform:translateX(0px) translateY(100%)}
+
+  /* 끝 */
+  to{transform:translate(50%);}
+}

@@ -1,0 +1,45 @@
+div{
+  background-color: orange;
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+@keyframes moving{
+  from{left:0px;}
+  to{left:1000px;}
+}
+
+.d1,.d2,.d3,.d4,.d5{
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.d1{
+  /* 처음부터 끝까지 동일 속도 */
+  animation-timing-function: linear;
+}
+
+.d2{
+  /* 처음-가속 마지막-감속 */
+  animation-timing-function: ease;
+}
+
+.d3{
+  /* 가속형 */
+  animation-timing-function: ease-in;
+}
+
+.d4{
+  /* 감속형 */
+  animation-timing-function: ease-out;
+}
+
+.d5{
+  /* 가속 후 감속 */
+  animation-timing-function: ease-in-out;
+}

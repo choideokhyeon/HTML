@@ -1,0 +1,181 @@
+/* index */
+body {
+  background-image: url(https://itsme-clinic.kr/images/main/signature_bg.jpg);
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+}
+
+.menu {
+  justify-content: space-evenly;
+  line-height: 50px;
+  color:white;
+}
+
+.menu>li{
+  color:black
+}
+
+.menu>li>a{
+  width:100px;
+  font-family: 메이플스토리;
+  position: absolute;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+#checkbtn {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  color:white;
+  font-family: 메이플스토리;
+}
+
+.submenu {
+  width: 80%;
+  height: 0px;
+  position: absolute;
+  margin-top: 30px;
+  animation-name: from_submenu;
+  animation-duration: 1500ms;
+  background-color: white;
+  transform:translateX(-5%);
+}
+
+#checkbtn:checked~.submenu {
+  display: flex;
+  animation-name: to_submenu;
+  animation-duration: 1500ms;
+  height: 570px;
+  background-color: white;
+}
+
+#checkbtn:checked~.submenu>.subtitle {
+  display: flex;
+  opacity: 1;
+  animation-name: to_subtitle;
+  animation-duration: 1s;
+}
+
+@keyframes to_submenu {
+  0% {
+    height: 0px
+  }
+
+  100% {
+    height: 570px
+  }
+}
+
+@keyframes from_submenu {
+  0% {
+    height: 570px;
+  }
+
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes to_subtitle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes from_subtitle {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.subtitle {
+  opacity: 0;
+  width: auto;
+  height: 0px;
+  margin: 20px;
+  padding: 50px;
+  font-weight: 700;
+  border-bottom: 2px solid gainsboro;
+  animation-name: from_subtitle;
+  animation-duration: 1s;
+  flex-grow:1;
+  transform: translateX(0px);
+}
+
+#subtitle2 {
+  width: 60%;
+}
+
+.EVENT a{
+  font-size:1rem;
+}
+.EVENT a:hover{
+  font-size:0;
+}
+.EVENT a:hover:before{
+  content: '이벤트';
+  font-size:1rem;
+}
+
+.COMMUNITY a{
+  font-size:1rem;
+}
+.COMMUNITY a:hover{
+  font-size:0;
+}
+.COMMUNITY a:hover:before{
+  content: '커뮤니티';
+  font-size:1rem;
+}
+
+.LOUNGE a{
+  font-size:1rem;
+}
+.LOUNGE a:hover{
+  font-size:0;
+}
+.LOUNGE a:hover:before{
+  content: '라운지';
+  font-size:1rem;
+}
+
+.BRANCH a{
+  font-size:1rem;
+}
+.BRANCH a:hover{
+  font-size:0;
+}
+.BRANCH a:hover:before{
+  content: '브런치';
+  font-size:1rem;
+}
+
+@media all and (max-width:768px)
+{
+  .EVENT,.COMMUNITY,.LOUNGE,.BRANCH{
+    display: none;
+  }
+
+  .submenu{
+    width:auto;
+  }
+}

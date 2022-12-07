@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS11-03 Object</title>
+</head>
+
+<body>
+  <button onclick="poppi.sound();">뽀삐야 짖어</button>
+  <button onclick="poppi.toString();">뽀삐 정보</button>
+  <hr>
+  <button onclick="myCar.accel();">시동 걸기</button>
+  <button onclick="myCar.showinfo();">차주 정보</button>
+
+  <script>
+    let poppi = {
+      name: '뽀삐',
+
+      kind: '포메라니안',
+
+      age: 3,
+
+      sound:function () {
+        alert(this.name + "가 짖습니다");
+      },
+
+      toString:function () {
+        alert("이름 : " + this.name + "\n나이 : " + this.age + "\n견종 : " + this.kind);
+      }
+    }
+
+    // 다음 Object를 만들어서 화면에 출력하시오
+    /* 
+      object : myCar
+      속성:값
+      owner:소유자 , category=차종, fuel=가솔린/디젤/LPG, speed=현재속도
+      accel : 엑셀을 밟습니다가 출력(alert)
+      showinfo : 속성정보 모두 출력(alert)
+    */
+
+    let myCar = {
+      owner:'홍길동',
+      category:'포르쉐',
+      fuelkind:'가솔린',
+      speed:120,
+
+      accel:function() {
+        alert(this.owner + "이 액셀을 밟습니다")
+      },
+
+      showinfo:function() {
+        alert("소유자 : " + this.owner + "\n차종 : " + this.category + "\n연료종류 : " + this.fuelkind + "\n현재속도 : " + this.speed)
+      }
+
+    }
+
+
+  </script>
+</body>
+
+</html>

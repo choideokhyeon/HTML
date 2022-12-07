@@ -59,10 +59,17 @@ li *{
   color:white;
 }
 
+div{
+  flex-wrap:2;
+  height:auto;
+  margin-bottom:auto;
+}
+
 .bnr_info{
+  display: block;
   position:absolute;
   width: 100%;
-  height: auto;
+  margin:auto;
 }
 
 .title_info{
@@ -106,43 +113,21 @@ li *{
 }
 
 
+
 #info1{
   position:relative;
-  margin-top: auto;
   margin-left:20px
 }
 
 .text1{
+  clear:both;
   display: block;
+  align-items: center;
   margin:auto;
 }
 
 #info2{
   justify-content: space-evenly;
-}
-
-.submenu2{
-  position: relative;
-  justify-content: space-evenly;
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 100px;
-}
-
-.submenu2>li{
-  width:200px;
-  margin:10px;
-  border-bottom: 2px solid black;
-}
-
-.submenu2>li:hover{
-  color:gray;
-  border-bottom: 2px solid gray;
-}
-
-.submenu2>li:hover a{
-  color:gray;
-  border-bottom: 2px solid gray;
 }
 
 .games>*{
@@ -167,12 +152,13 @@ li *{
   text-align: left;
 }
 
-table{
+.if2tb{
   width:1000px
 }
 
 tr>th{
   padding:20px;
+  vertical-align: top;
 }
 
 th>p{

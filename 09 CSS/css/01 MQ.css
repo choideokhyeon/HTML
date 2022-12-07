@@ -1,0 +1,19 @@
+div {
+  height: 150px;
+  background-color: black;
+}
+
+/* 매체유형
+all : 모든 device
+print : 프린트 기기
+screen : 컴퓨터,태블릿,스마트폰 등 스크린이 있는 매체
+speech
+*/
+
+@media all and (max-width:1024px){
+  div{background-color: orange;}
+}
+
+@media all and (max-width:768px){
+  div{background-color:green;}
+}
