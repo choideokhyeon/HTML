@@ -1,0 +1,35 @@
+ul{
+  list-style:none;
+  padding:0px;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+}
+.menu>li{}
+
+.menu>li>a{
+  display: block;
+  width:100%;
+}
+
+.menu>li>.submenu{
+  display:none;
+  position: absolute;
+}
+
+.menu>li>.submenu>li{
+
+}
+
+.menu>li:hover .submenu{
+  display:block;
+}
+
+.menu>li:nth-child(1){
+  background-color: orange;
+}

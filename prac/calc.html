@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계산기</title>
+  <style>
+    input{
+      width:50px;
+    }
+  </style>
+</head>
+<body>
+  <input class="input1" type="text">
+  <select name="calc" id="calcsel">
+    <option value="plus">+</option>
+    <option value="minus">-</option>
+    <option value="multiple">*</option>
+    <option value="divine">/</option>
+  </select>
+  <input class="input2" type="text">
+  <button onclick="calc();">확인</button>
+  <hr>
+  결과 : <div class="output"></div>
+
+
+  <script>
+  let calc = function(){
+    let input1El = document.querySelector('.input1');
+    let input2El = document.querySelector('.input2');
+    let outputEl = document.querySelector('.output');
+    let n1 = input1El.value;
+    let n2 = input2El.value;
+    if(isNaN(n1) || isNaN(n2))
+    {
+      alert('숫자만 입력하세요');
+      return;
+    }
+    else{
+      n1 = parseInt(n1);
+      n2 = parseInt(n2);
+      let calcselEl = document.querySelector('#calcsel');
+      if(calcselEl.value == "plus")
+      {
+        alert(`${n1} + ${n2} = ${n1+n2}`);
+      }
+      else if(calcselEl.value =="multiple")
+      {
+        alert(`${n1} * ${n2} = ${n1*n2}`);
+      }
+      
+    }
+  }
+
+  </script>
+</body>
+</html>

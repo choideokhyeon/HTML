@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 14-03 QuerySelector</title>
+  <style>
+    div {
+      margin: 10px;
+    }
+
+    .btn {
+      width: 100px;
+      height: 30px;
+      background-color: lightgray;
+      text-align: center;
+      line-height: 30px;
+      color: black;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: 500ms;
+    }
+
+    .btn--style1 {
+      background-color: red;
+      color: white;
+    }
+
+    .btn--style2 {
+      background-color: orange;
+    }
+
+    .btn--style3 {
+      background-color: yellow;
+    }
+
+    .btn--style4 {
+      background-color: green;
+      color: white;
+    }
+
+    .btn--style5 {
+      background-color: blue;
+      color: white;
+    }
+
+    .btn--style6 {
+      background-color: navy;
+      color: white;
+    }
+
+    .btn--style7 {
+      background-color: purple;
+      color: white;
+    }
+
+    .fs-xl{
+      font-size: 1.5rem;
+      font-family: 메이플스토리;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <script>
+    const btnEls = document.querySelectorAll('.btn');
+    btnEls.forEach((btnEl, idx) => {
+      btnEl.addEventListener('click', () => {
+        // btn--style이 안 들어가 있다면
+        if (!btnEl.classList.contains(`btn--style${idx+1}`)) {
+          btnEl.classList.add(`btn--style${idx+1}`);
+          btnEl.classList.add('fs-xl');
+        }
+        
+        // btn-style이 들어가 있다면
+        else {
+          btnEl.classList.remove(`btn--style${idx+1}`);
+          btnEl.classList.remove('fs-xl');
+        }
+      }); //btnEl 이벤트 끝
+    }); //btnEls forEach 끝
+  </script>
+</body>
+
+</html>

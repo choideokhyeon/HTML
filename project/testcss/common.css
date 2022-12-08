@@ -2,27 +2,20 @@ body{
   height: 3000px;
 }
 
+ul{
+  list-style: none;
+  padding:0px;
+  min-height:auto;
+}
+
 a{
   text-decoration: none;
-}
-
-.menu{
-  padding:0px;
-  width:100%;
-  list-style: none;
-}
-
-.menu>li{
-  font-family: 메이플스토리;
-  font-size: 3rem;
-  display: flex;
-  margin:20px;
-  justify-content: space-evenly;
+  color : white;
 }
 
 @media all and (max-width:1000px)
 {
-  .menu{
+  .menu,.submenu{
     display:none;
   }
 }
