@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 13-03 prac 99dan</title>
+</head>
+<style>
+  body{
+    font-family: 메이플스토리;
+  }
+  td {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000;
+    text-align: center;
+  }
+
+  caption {
+    border: 1px solid #000;
+    height: 35px;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .output {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  table {
+    margin: 15px;
+  }
+
+  .dan2 {
+    background-color: red;
+    color: white;
+  }
+  .dan3 {
+    background-color: orange;
+  }
+  .dan4 {
+    background-color: yellow;
+  }
+  .dan5 {
+    background-color: green;
+    color: white;
+  }
+  .dan6 {
+    background-color: blue;
+    color: white;
+  }
+  .dan7 {
+    background-color: navy;
+    color: white;
+  }
+  .dan8 {
+    background-color: purple;
+    color: white;
+  }
+  .dan9 {
+    background-color: black;
+    color: white;
+  }
+
+  .num{
+    background-color: gainsboro;
+    color : black;
+  }
+
+  .result {
+    background-color: gray;
+    color : white;
+  }
+</style>
+
+<body>
+  <button onclick="func();">출력</button>
+  <hr>
+  <div class="output"></div>
+
+  <!-- 
+    2-9단까지 구구단을 가로배치하여 한번에 출력하는 자바스크립트 함수를 만들어보세요
+    태크는 table,tr,td 이용
+    스타일은 자유롭게~
+   -->
+
+  <script>
+    let func = function () {
+      let outputEl = document.querySelector('.output');
+      let tblcode = 0;
+
+      for (let dan = 2; dan < 10; dan++) {
+        tblcode = '<table>';
+        tblcode += `<caption class="dan${dan}">` + dan + '단</caption>';
+        for (let i = 1; i < 10; i++) {
+          tblcode += '<tr>';
+          tblcode += `<td class="dan${dan}">` + dan + '</td>';
+          tblcode += '<td> x </td>';
+          tblcode += '<td class="num">' + i + '</td>';
+          tblcode += '<td> = </td>';
+          tblcode += '<td class="result">' + dan * i + '</td>';
+          tblcode += '</tr>';
+        }
+        tblcode += '</table>'
+        outputEl.innerHTML += tblcode;
+      }
+    }
+  </script>
+</body>
+
+</html>

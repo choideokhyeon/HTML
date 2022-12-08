@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table * {
+    border: 1px solid #000;
+    width: 10px;
+    height: 10px;
+  }
+</style>
+
+<body>
+  <!-- JS를 이용 prompt로 row와 col을 받아 행렬 테이블을 만드세요 -->
+  <script>
+    while(true){
+    let row = prompt("row 값을 입력하세요(홀수)");
+    let col = prompt("col 값을 입력하세요(홀수)");
+    if (isNaN(row) || isNaN(col)) { //정수여부 검사
+      alert('숫자만 입력하세요');
+      continue;
+    } else {
+      row = parseInt(row);
+      col = parseInt(col);
+      if (row % 2 == 0 || col % 2 == 0) { //홀수여부 검사
+        alert('홀수만 입력해주세요');
+        continue;
+      } else {
+        document.write('<table>');
+        for (let i = 0; i < row; i++) {
+          document.write('<tr>');
+          for (let j = 0; j < col; j++) {
+            document.write(`<td></td>`);
+          }
+          document.write('</tr>');
+        }
+        document.write('</table>');
+        break;
+      }
+    }
+  }
+  </script>
+</body>
+
+</html>

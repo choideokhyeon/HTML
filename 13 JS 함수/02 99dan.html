@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  td{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000;
+    text-align: center;
+  }
+
+  caption{
+    border: 1px solid #000;
+    height: 35px;
+    flex-wrap: wrap;
+  }
+
+  .output{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  table{
+    margin: 15px;
+  }
+</style>
+
+<body>
+  <input class="input" type="text"><button onclick="func();">확인</button>
+  <hr>
+  <div class="output"></div>
+
+  <script>
+    let func = function () {
+      let inputEl = document.querySelector('.input');
+      let outputEl = document.querySelector('.output');
+      let dan = inputEl.value;
+      if (isNaN(dan)) {
+        alert('숫자를 입력하세요');
+        return;
+      }
+      let tblcode = '<table>';
+      tblcode += '<caption>' + dan + ' 단</caption><br>';
+      for (i = 1; i < 10; i++) {
+        tblcode += '<tr>';
+        tblcode += '<td>' + dan + '</td>';
+        tblcode += '<td>' + i + '</td>';
+        tblcode += '<td>' + dan * i + '</td>';
+        tblcode += '</tr>';
+      }
+      tblcode += '</table>';
+      outputEl.innerHTML += tblcode;
+    }
+  </script>
+</body>
+
+</html>

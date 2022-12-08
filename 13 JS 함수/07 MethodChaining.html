@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 13-07 MethodChaining</title>
+</head>
+
+<body>
+
+  <script>
+    // split    : String을 특정기호(인수)를 기준으로 나누어 배열로 저장
+    // reverse  : 배열로 된 요소들을 거꾸로 배치함
+    // join     : 특정기호(인수)를 기준으로 나누어 String으로 연결
+    // concat   : String에 내용 추가
+    let str = "HELLO~";
+    console.log(str);
+    console.log(typeof str);
+    console.log(str.split(''));
+    console.log(typeof str.split(''));
+    console.log(str.split('').reverse());
+    console.log(str.split('').reverse().join(''));
+    console.log(str.split('').reverse().join('').concat("TESTTEST"));
+  </script>
+
+</body>
+
+</html>
