@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" class="input">
+  <button onclick="addEl()">추가</button>
+  <button onclick="delEl()">삭제</button>
+  <hr>
+  <div class="output"></div>
+
+  <script>
+    let addEl = function(){
+      let inputEl = document.querySelector('.input');
+      let outputEl = document.querySelector('.output');
+      let str = inputEl.value;
+      outputEl.innerHTML += `<li id="abc">${str}</li>`;
+      inputEl.value=null;
+    }
+
+    let delEl = function(){
+      const del = document.getElementById('abc');
+      del.remove();
+    }
+  </script>
+</body>
+</html>
