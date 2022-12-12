@@ -1,0 +1,35 @@
+/* common */
+ul{
+  list-style: none;
+  padding: 0px;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+
+/* header */
+header>div>.main-menu{
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  font-family: 메이플스토리;
+}
+
+.sub-menu{
+  display:none;
+  position: absolute;
+}
+
+.sub-menu>li{
+  width:80px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.main-menu>li:hover .sub-menu{
+  display:block;
+}
