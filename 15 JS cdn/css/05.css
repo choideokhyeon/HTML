@@ -1,0 +1,55 @@
+.background-fixed{
+  height:1000px;
+  /* border:1px solid gray; */
+  background-image:url('../img/starbucks.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
+  background-attachment:fixed;
+  padding:100px 0;
+}
+
+.background-fixed>.inner{
+/*   
+  border : 5px solid red; */
+  height:1000px;
+  display:flex;
+  justify-content:space-around;
+}
+
+.background-fixed>.inner>.txtgroup{
+  
+  /* border : 1px solid white; */
+  width :680px;
+  height : 500px;
+  text-align:right;
+  position:sticky;
+  top:0px;
+  margin-top:50px;
+  
+}
+.background-fixed>.inner>.txtgroup >.txt01{
+  display:block;
+  position:absolute;  
+  right:0;
+  margin-bottom:50px;
+}
+.background-fixed>.inner>.txtgroup >.txt02{
+  display:block;
+  position:absolute;    
+  top:300px;
+  right:0;
+   
+
+   
+}
+
+
+
+.background-fixed>.inner .img01{
+  position:sticky;
+  left:80%;
+  top:50px;
+   
+
+}
