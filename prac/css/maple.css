@@ -1,0 +1,150 @@
+/* common */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: NexonMaplestory;
+  font-size: 1.2rem;
+}
+
+.inner{
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+
+
+
+/* header */
+/* gnb-top
+  최상단 헤더 퀵클릭 */
+header>.inner>.gnb-top{
+  height:42px;
+}
+
+header>.inner>.gnb-top>.header-banner{
+  border: 1px solid #000;
+  background-color: aliceblue;
+}
+
+header>.inner>.gnb-top>.header-banner>.swiper{
+  height: 42px;
+}
+header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+}
+
+header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide>a{
+  text-decoration: none;
+  color:black;
+  align-items: center;
+  display:flex;
+  margin-left: 5px;
+}
+
+header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide>a>img{
+  margin: 10px;
+}
+
+
+
+
+/* gnb-second
+  상단메뉴바 */
+header>.inner>.gnb-second{
+  height: 86px;
+  border: 1px solid #000;
+  background-color: aquamarine;
+}
+
+header>.inner>.gnb-second>.sub-menu *{
+  list-style: none;
+  padding:0px;
+  text-decoration: none;
+}
+
+header>.inner>.gnb-second>.sub-menu>li>.inner-menu{
+  display:none;
+}
+
+
+
+
+/* gnb */
+header>.inner>.gnb{
+  height: 65px;
+  border: 1px solid #000;
+  background-color: beige;
+}
+
+
+/* main-banner */
+section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img{
+  width:950px;
+  height:800px;
+  display: flex;
+  justify-content: center;
+}
+
+section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{
+  transition: 0.5s;
+  transform: scale(0.6);
+  opacity: 0.5;
+  left:-10%;
+}
+
+section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide.swiper-slide-active{
+  opacity: 1;
+  transform: scale(0.8);
+  z-index: 10;
+}
+
+section>.main-banner .swiper-button-prev::after,
+section>.main-banner .swiper-button-next::after{
+  display:none;
+}
+
+section>.main-banner .swiper-button-prev,
+section>.main-banner .swiper-button-next{
+  width:50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.2rem;
+  color:black;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+
+
+
+
+
+
+/* 화면 창 사이즈에 따라 배너 크기 조절 */
+@media all and (max-width:1300px){
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img{
+    width:570px;
+    height:480px;
+  }
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{
+    left:-20%;
+  }
+}
+
+@media all and (max-width:700px){
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img{
+    width:380px;
+    height:320px;
+  }
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{
+    left:-25%;
+  }
+}

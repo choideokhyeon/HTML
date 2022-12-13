@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      border: 1px solid #000;
+      height:600px;
+      display: flex;
+      /* 가로정렬 */
+
+      /* flex-direction: row; */
+      /* row(기본값), row-reverse, column, column-reverse 정렬 */
+
+      /* flex-wrap:wrap-reverse; */
+      /* 줄넘김 처리 설정
+      - nowrap(기본값) : 자동적으로 width 조절
+      - wrap : width값에 맞춰서 알아서 줄바꿈
+      - wrap-reverse : wrap에서 순서대로 아래부터 쌓기*/
+
+      flex-flow: row wrap;
+      /* 위의 direction과 wrap을 같이 쓰는 형태 */
+
+      justify-content:center;
+      /* 가로축 방향으로 item을 정렬
+      - flex-start(기본값) : row시 왼쪽 정렬, column시 위쪽 정렬
+      - flex-end : row시 오른쪽 정렬, column시 아래쪽 정렬
+      - center : 가운데 정렬
+      - space-between : item 사이에 균일한 간격으로 정렬
+      - space-around : item들의 둘레에 균일한 간격 정렬
+      - space-evenly : container 안의 item과 모든 둘레,사이 균일한 간격 정렬*/
+
+      align-items:center;
+      /* 세로축 방향으로 item을 정렬
+      - stretch(기본값) : item들이 수직 방향으로 끝까지 쭉 늘어남
+      - flex-start : item들이 위쪽에 정렬됨
+      - flex-end : item들이 아래쪽에 정렬됨
+      - center : item들이 가운데 정렬됨
+      - baseline : item들이 텍스트 베이스라인 기준으로 정렬됨 */
+
+    }
+
+    .item {
+      border: 1px solid #000;
+      width: 300px;
+      /* height: 300px; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item"><a href="https://studiomeal.com/archives/197">LINK1</a></div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .mainmenu *{
+    padding:0px;
+  }
+  li{
+    list-style: none;
+    /* li 스타일 옆의 점 제거 */
+  }
+
+  .submenu{
+    display:none;
+  }
+
+  .submenu>li{
+    color:black;
+  }
+
+  .submenu>li>a{
+    color:black;
+
+    text-decoration: none;
+    /* a타입(링크) 태그 밑줄 제거 */
+  }
+
+  .mainmenu:hover .submenu{
+    display: block;
+  }
+</style>
+
+<body>
+  <div class="mainmenu">
+    <a href="">메뉴모음집</a>
+    <ul class="submenu">
+      <li><a href="">MENU1</a></li>
+      <li><a href="">MENU2</a></li>
+      <li><a href="">MENU3</a></li>
+      <li><a href="">MENU4</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

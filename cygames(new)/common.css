@@ -14,20 +14,27 @@ a{
 header>div>.main-menu{
   display: flex;
   position: relative;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 1.5rem;
   font-family: 메이플스토리;
+}
+
+.main-menu>li{
+  width:120px;
 }
 
 .sub-menu{
   display:none;
   position: absolute;
+  border: 1px solid rgb(200,200,200);
+  background-color: rgb(230,230,230);
+  text-align: center;
+  width:100px;
+  transform:translateX(-20px);
 }
 
 .sub-menu>li{
-  width:80px;
-  text-align: center;
-  border: 1px solid #000;
+  border: 1px solid rgb(200,200,200);
 }
 
 .main-menu>li:hover .sub-menu{
