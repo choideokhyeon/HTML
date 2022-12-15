@@ -64,39 +64,3 @@ gnbsecond.addEventListener('mouseout', function () {
   submenu5.style.display = 'none';
   submenu6.style.display = 'none';
 })
-
-
-
-//로그인창 버튼
-const loginbtn = document.querySelector('.login-btn');
-
-const findpwbtn = document.querySelector('.findpw-btn');
-
-const joinbtn = document.querySelector('.join-btn');
-
-
-loginbtn.addEventListener('click',function(){
-  alert('로그인 하셨습니다');
-});
-
-findpwbtn.addEventListener('click',function(){
-  alert('비밀번호 찾기');
-});
-
-joinbtn.addEventListener('click',function(){
-  alert('회원가입하기');
-});
-
-
-//회원가입창 버튼
-const authbtn = document.querySelector('.auth-btn');
-
-const cancelbtn = document.querySelector('.cancel-btn');
-
-authbtn.addEventListener('click',function(){
-  alert('전화번호 인증 완료');
-});
-
-cancelbtn.addEventListener('click',function(event){
-  alert('취소합니다');
-})

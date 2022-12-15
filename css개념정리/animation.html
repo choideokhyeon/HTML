@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+</head>
+<style>
+  .container{
+    width: 1000px;
+    height: 3000px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box{
+    width:200px;
+    height:200px;
+    border: 1px solid #000;
+    background-color: orange;
+    opacity: 0.5;
+    position: relative;
+    display: block;
+  }
+  .container>#b1{
+    right:0;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes anime{
+    0% {top : -100px}
+    100%{top : 0px}
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="box" id="b1">b1</div>
+    <div class="box" id="b2">b2</div>
+    <div class="box" id="b3">b3</div>
+  </div>
+</body>
+</html>

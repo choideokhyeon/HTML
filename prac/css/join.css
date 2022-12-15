@@ -1,0 +1,40 @@
+/* join.html */
+#join{
+  width:100%;
+}
+
+.joinbox{
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:black;
+}
+
+.joinbox input,select,button{
+  width: 180px;
+  height: 30px;
+  box-shadow: 3px 3px black;
+  margin: 5px auto;
+}
+
+.joinbox #sex-select,#birth-month,#day{
+  width:50px;
+  height:30px;
+}
+
+#day{
+  width:50px;
+  height:30px;
+}
+
+.joinbox button{
+  width:100px;
+  height:30px;
+}
+
+#authnum:disabled{
+  border: 1px solid #000;
+  background-color: gainsboro;
+}

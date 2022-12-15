@@ -1,0 +1,26 @@
+
+/* login.html */
+#login{
+  width:100%;
+}
+
+.loginbox{
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+.loginbox input{
+  width: 180px;
+  height: 30px;
+  box-shadow: 3px 3px black;
+  margin: 10px auto;
+}
+
+.loginbox button{
+  width:100px;
+  height: 30px;
+}

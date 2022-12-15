@@ -1,15 +1,15 @@
 /* common */
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: NexonMaplestory;
   font-size: 1.2rem;
-  padding-top:100px;
+  padding-top: 100px;
 }
 
-.inner{
+.inner {
   margin: 0 auto;
   position: relative;
   transition: 1s;
@@ -17,28 +17,60 @@ body{
 
 
 /* index bg */
-#index{
+#index {
   width: 1920px;
   height: 1080px;
-  background-image:url('../img/bg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-}
-#login{
-  width: 1920px;
-  height: 1080px;
-  background-image:url('../img/loginbg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-}
-#join{
-  width: 1920px;
-  height: 1080px;
-  background-image:url('../img/joinbg.jpg');
+  background-image: url('../img/bg.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
 
+#login {
+  width: 1920px;
+  height: 1080px;
+  background-image: url('../img/loginbg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#join {
+  width: 1920px;
+  height: 1080px;
+  background-image: url('../img/joinbg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#index>img{
+  width:500px;
+  height:auto;
+  display:inline-block;
+  position: sticky;
+}
+
+#slime{
+animation-name: monster;
+animation-duration: 2s;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+}
+
+#mush{
+animation-name: monster2;
+animation-duration: 2s;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+}
+
+@keyframes monster{
+  0%{left:0%}
+  100%{left:50%}
+}
+
+@keyframes monster2{
+  0%{left:100%}
+  100%{left:10%}
+}
 
 
 
@@ -48,27 +80,27 @@ body{
 /* header */
 /* gnb-top
   최상단 헤더 퀵클릭 */
-header>.inner>.gnb-top{
-  height:42px;
+header>.inner>.gnb-top {
+  height: 42px;
   position: fixed;
   width: 100%;
-  top:0px;
+  top: 0px;
   z-index: 10;
 }
 
-header>.inner>.gnb-top>.header-banner{
+header>.inner>.gnb-top>.header-banner {
   padding-left: 20px;
 }
 
-header>.inner>.gnb-top>.header-banner>.header-link>a{
-  margin:15px;
+header>.inner>.gnb-top>.header-banner>.header-link>a {
+  margin: 15px;
   font-size: 0.8rem;
   text-decoration: none;
   line-height: 42px;
   color: black;
 }
 
-header>.inner>.gnb-top>.header-banner{
+header>.inner>.gnb-top>.header-banner {
   border: 1px solid #000;
   background-color: aliceblue;
   display: flex;
@@ -76,11 +108,12 @@ header>.inner>.gnb-top>.header-banner{
   align-items: center;
 }
 
-header>.inner>.gnb-top>.header-banner>.swiper{
+header>.inner>.gnb-top>.header-banner>.swiper {
   height: 42px;
-  left:220px;
+  left: 220px;
 }
-header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide{
+
+header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -88,15 +121,15 @@ header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide{
   flex-wrap: nowrap;
 }
 
-header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide>a{
+header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide>a {
   text-decoration: none;
-  color:black;
+  color: black;
   align-items: center;
-  display:flex;
+  display: flex;
   margin-left: 5px;
 }
 
-header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide>a>img{
+header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide>a>img {
   margin: 10px;
 }
 
@@ -105,7 +138,7 @@ header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide>a>im
 
 /* gnb-second
   상단메뉴바 */
-header>.inner>.gnb-second{
+header>.inner>.gnb-second {
   height: 60px;
   border: 1px solid #000;
   background-color: gainsboro;
@@ -113,111 +146,120 @@ header>.inner>.gnb-second{
   justify-content: space-around;
   position: fixed;
   width: 100%;
-  top:42px;
+  top: 42px;
   z-index: 8;
 }
 
-header>.inner>.gnb-second>.sub-menu *{
+header>.inner>.gnb-second>.sub-menu * {
   list-style: none;
-  padding:0px;
+  padding: 0px;
   text-decoration: none;
 }
 
-header>.inner>.gnb-second>.sub-menu{
+header>.inner>.gnb-second>.sub-menu {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: nowrap;
   text-align: center;
 }
-header>.inner>.gnb-second>.sub-menu>li{
+
+header>.inner>.gnb-second>.sub-menu>li {
   width: 150px;
 }
-header>.inner>.gnb-second>.sub-menu>li>a{
-  color:black;
+
+header>.inner>.gnb-second>.sub-menu>li>a {
+  color: black;
 }
 
-header>.inner>.gnb-second>.sub-menu>li>.inner-menu{
-  display:none;
+header>.inner>.gnb-second>.sub-menu>li>.inner-menu {
+  display: none;
   text-align: center;
   /* border: 1px solid #000; */
   font-size: 0.8rem;
 }
 
-header>.inner>.gnb-second>.sub-menu>li>.inner-menu>li{
-  margin:10px auto;
+header>.inner>.gnb-second>.sub-menu>li>.inner-menu>li {
+  margin: 10px auto;
 }
 
 
 /* 퀵메뉴바 hover */
-header>.inner>.gnb-top a:hover{
+header>.inner>.gnb-top a:hover {
   opacity: 0.6;
 }
 
 
 
 /* 상단메뉴바 hover */
-header>.inner>.gnb-second:hover a{
-  color:white;
-}
-header>.inner>.gnb-second:hover .sub-menu>li>a{
-  color:white;
+header>.inner>.gnb-second:hover a {
+  color: white;
 }
 
-header>.inner>.gnb-second>.sub-menu>li>a:hover{
+header>.inner>.gnb-second:hover .sub-menu>li>a {
+  color: white;
+}
+
+header>.inner>.gnb-second>.sub-menu>li>a:hover {
   opacity: 0.8;
 }
 
-header>.inner>.gnb-second>.sub-menu>li>.inner-menu>li>a:hover{
+header>.inner>.gnb-second>.sub-menu>li>.inner-menu>li>a:hover {
   opacity: 0.8;
 }
 
 /* hover시 영어로 메뉴이름 변경 */
-#news:hover>a{
-  font-size:0;
+#news:hover>a {
+  font-size: 0;
 }
-#news:hover>a::before{
+
+#news:hover>a::before {
   content: 'NEWS';
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
-#guide:hover>a{
-  font-size:0;
+#guide:hover>a {
+  font-size: 0;
 }
-#guide:hover>a::before{
+
+#guide:hover>a::before {
   content: 'GUIDE';
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
-#ranking:hover>a{
-  font-size:0;
+#ranking:hover>a {
+  font-size: 0;
 }
-#ranking:hover>a::before{
+
+#ranking:hover>a::before {
   content: 'RANKING';
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
-#community:hover>a{
-  font-size:0;
+#community:hover>a {
+  font-size: 0;
 }
-#community:hover>a::before{
+
+#community:hover>a::before {
   content: 'COMMUNITY';
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
-#media:hover>a{
-  font-size:0;
+#media:hover>a {
+  font-size: 0;
 }
-#media:hover>a::before{
+
+#media:hover>a::before {
   content: 'MEDIA';
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
-#help:hover>a{
-  font-size:0;
+#help:hover>a {
+  font-size: 0;
 }
-#help:hover>a::before{
+
+#help:hover>a::before {
   content: 'SUPPORT';
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
 
@@ -227,124 +269,49 @@ header>.inner>.gnb-second>.sub-menu>li>.inner-menu>li>a:hover{
 
 /* main-banner */
 
-section>.main-banner>.inner>.swiper{
+section>.main-banner>.inner>.swiper {
   background-color: rgba(255, 0, 0, 0.1);
   position: relative;
 }
 
-section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img{
-  width:950px;
-  height:800px;
+section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img {
+  width: 950px;
+  height: 800px;
   display: flex;
   justify-content: center;
 }
 
-section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{
+section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide {
   transition: 0.5s;
   transform: scale(0.6);
   opacity: 0.5;
-  left:-10%;
+  left: -10%;
 }
 
-section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide.swiper-slide-active{
+section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide.swiper-slide-active {
   opacity: 1;
   transform: scale(0.8);
   z-index: 10;
 }
 
 section>.main-banner .swiper-button-prev::after,
-section>.main-banner .swiper-button-next::after{
-  display:none;
+section>.main-banner .swiper-button-next::after {
+  display: none;
 }
 
 section>.main-banner .swiper-button-prev,
-section>.main-banner .swiper-button-next{
-  width:50px;
+section>.main-banner .swiper-button-next {
+  width: 50px;
   height: 50px;
   line-height: 50px;
   font-size: 1.2rem;
-  color:black;
+  color: black;
   border-radius: 10px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 
 
-
-
-
-
-
-/* login.html */
-#login{
-  width:100%;
-}
-
-.loginbox{
-  height: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color:white;
-}
-
-.loginbox input{
-  width: 180px;
-  height: 30px;
-  box-shadow: 3px 3px black;
-  margin: 10px auto;
-}
-
-.loginbox button{
-  width:100px;
-  height: 30px;
-}
-
-
-
-
-
-/* join.html */
-#join{
-  width:100%;
-}
-
-.joinbox{
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color:black;
-}
-
-.joinbox input,select,button{
-  width: 180px;
-  height: 30px;
-  box-shadow: 3px 3px black;
-  margin: 5px auto;
-}
-
-.joinbox #sex-select,#birth-month,#day{
-  width:50px;
-  height:30px;
-}
-
-#day{
-  width:50px;
-  height:30px;
-}
-
-.joinbox button{
-  width:100px;
-  height:30px;
-}
-
-#authnum:disabled{
-  border: 1px solid #000;
-  background-color: gainsboro;
-}
 
 
 
@@ -353,35 +320,38 @@ section>.main-banner .swiper-button-next{
 
 /* 화면 창 사이즈에 따라 배너 크기 조절 */
 
-@media all and (max-width:1500px){
-  header>.inner>.gnb-top>.header-banner>.swiper{
-    left:400px
+@media all and (max-width:1500px) {
+  header>.inner>.gnb-top>.header-banner>.swiper {
+    left: 400px
   }
 }
 
-@media all and (max-width:1300px){
-  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img{
-    width:570px;
-    height:480px;
-  }
-  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{
-    left:-20%;
+@media all and (max-width:1300px) {
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img {
+    width: 570px;
+    height: 480px;
   }
 
-  header>.inner>.gnb-top>.header-banner>.swiper{
-    left:150px
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide {
+    left: -20%;
+  }
+
+  header>.inner>.gnb-top>.header-banner>.swiper {
+    left: 150px
   }
 }
 
-@media all and (max-width:700px){
-  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img{
-    width:380px;
-    height:320px;
+@media all and (max-width:700px) {
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img {
+    width: 380px;
+    height: 320px;
   }
-  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{
-    left:-25%;
+
+  section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide {
+    left: -25%;
   }
-  header>.inner>.gnb-top>.header-banner>.swiper{
-    left:50px;
+
+  header>.inner>.gnb-top>.header-banner>.swiper {
+    left: 50px;
   }
 }

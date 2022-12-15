@@ -16,12 +16,28 @@
       border: 1px solid #000;
       width: 500px;
       height: 500px;
+      background-color: red;
+    }
+    .box>img{
+      width: 200px;
+      height: auto;
+      position: relative;
+      animation-name: slime;
+      animation-duration: 2s;
+    }
+
+    @keyframes slime {
+      0%{left : 0px; top:0px}
+      50%{left:300px; top:0px}
+      100%{left:300px; top:300px}
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="box"></div>
+    <div class="box">
+      <img src="prac/img/slime.png" alt="">
+    </div>
   </div>
 </body>
 </html>

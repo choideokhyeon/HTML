@@ -38,10 +38,7 @@
   display:block;
   position:absolute;    
   top:300px;
-  right:0;
-   
-
-   
+  right:0;   
 }
 
 
@@ -50,6 +47,4 @@
   position:sticky;
   left:80%;
   top:50px;
-   
-
 }
