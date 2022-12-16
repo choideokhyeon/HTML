@@ -1,0 +1,411 @@
+/* 폰트 적용 */
+@font-face {
+    /* 
+        @font-face 폰트 지시어
+        서체이름과 다운로드 받을 위치 전달
+    */
+    
+    font-family:'C-Light';
+    /* 서체이름 */
+
+    src:url('../font/CormorantGaramond-Light.ttf')
+    /* 다운받을 위치 */
+}
+@font-face {
+    font-family:'C-Medium';
+    src:url('../font/CormorantGaramond-Medium.ttf')
+}
+p,span {
+    display: block;
+    /*
+        display : 화면을 배치하는 방법
+            block : 아이템 혼자 한줄을 차지하는 배치
+                    with,margin,padding을 이용하여 크기나 위치를 지정하려면 block이여야 한다(div,p,ul,ol,li,hr,table 등에 쓰임)
+            inline : 화면에 표시되는 영역만큼 차지하는 배치
+            none : 아이템을 아예 표시하지 않음(공간조차 없앰,           
+                   visible:hidden의 경우 가리기만 함)
+    */
+}
+
+.contents{
+/* .클래스명 */
+
+    width: 100%;
+    /* width : 가로배치
+        auto : 요소의 크기에 자동으로 맞춤(기본값)
+        px,cm,in,em : 등의 절대값 단위를 사용
+        % : 부모요소에 상대적인 너비
+        inherit : 부모로부터 상속 받은 값
+    */
+ 
+    height: auto;
+    /* height : 세로배치
+        요소의 설정값은 width와 동일
+    */
+
+    margin-top:93px;
+    /* margin : border(테두리)와 이웃하는 아이템 사이의 간격(마진)의 크기 설정
+        뒤에 -top,-right,-bottom,-left를 붙여서 원하는 방향에 설정가능
+        margin : tpx rpx bpx lpx 순서대로 쓰면 한번에 설정 가능
+        auto : 수평 방향 마진값을 자동으로 설정해줌
+    */
+}
+
+#content-top,#content-mid,#content-bottom
+/* #아이디명 */
+{
+    width: 100%;
+}
+
+
+/* Content-TOP!! */
+#content-top{
+    /* border: 1px solid black; */
+    height: 900px;
+    background-image:url('../image/KakaoTalk_20221214_114740406.jpg') ;
+    /* background-image : 해당 태그에 배경이미지를 삽입한다
+        url : 해당 이미지의 주소값을 받아온다
+        inherit : 부모요소의 속성값을 상속받는다
+    */    
+
+    background-size: cover;
+    /* background-size : 배경이미지의 크기를 설정한다
+            contain : 이미지가 잘리거나 찌그러지지 않는 한도내에 제일 크게 변경
+            cover : 이미지가 찌그러지지 않는 한도 내에 제일 크게 설정, 가로세로비가 요소와 다를 경우 세로나 가로로 잘라내어 빈 공간이 생기지 않게 함
+            auto : 원본 크기를 유지
+            wpx hpx : 가로세로 크기를 넣어서 변경, % 사용가능
+    */
+
+    padding-top: 17%;
+    /* padding : 내용과 border(테두리) 사이의 간격(패딩)의 크기 설정
+        뒤에 -top,-right,-bottom,-left를 붙여서 원하는 방향에 설정가능
+        margin과 마찬가지로 한번에 사용가능(top right bottom left 순서)
+    */
+}
+#content-top>img {
+    width: 100%;
+    height: 100%;
+}
+#content-top .top-text {
+    /* border: 1px solid black; */
+}
+.top-text {
+    width: 100%;
+}
+.top-text span{
+    display: block;
+    color: white;
+    /*
+        color : 색상을 삽입한다
+        - 색상의 영문명
+        - rgb(0,0,0)
+        - rgba(0,0,0,투명도)
+        - 16진수색상값(#000000)
+    */
+
+    /* margin-bottom: 10px; */
+    padding: 20px;
+}
+.top-text>span:nth-child(1){
+/* :nth-child(n) 해당 선택자의 n번째 자식 선택*/
+
+    /* border: 1px solid black; */
+    text-align: center;
+    /*
+        text-align : 텍스트의 정렬 방향을 의미
+        left왼쪽, right오른쪽, center중앙, justify양쪽
+        *justify는 태그안에서 줄바꿈이 될 경우에 보임
+    */
+
+    font-size: 41px;
+    /*
+        font-size : 텍스트의 사이즈 조절
+            px : 절대값 조절(기본값 16px)
+            %,em : 부모 요소의 크기에 따른 비율 조절
+            rem : 기본 글자크기(16px)에 대한 상대적인 비율로 조절
+    */
+
+    font-family: 'C-Light';
+    /*
+        font-family : 원하는 폰트명을 넣어 텍스트의 폰트 변경
+            컴퓨터 내부에 설치된 폰트 또는 외부css로 가져와서 사용가능
+    */
+}
+.top-text>span:nth-child(2){
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 28px;
+}
+.top-text>span:nth-child(3){
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 46px;
+    font-weight: 700;
+    /*
+        font-weight : 글자의 굵기 조절
+            굵기는 폰트에 따라서 나타낼 수 있는 굵기가 모두 다름
+            normal(기본굵기 400)
+            bold(굵게하기 700)
+            bolder(부모 요소보다 굵게)
+            lighter(부모 요소보다 얇게)
+            100~900으로 조정가능
+    */
+}
+
+
+/* Content-Mid 구간 */
+#content-mid{
+    height: auto;
+    /* background-color: aqua; */
+}
+
+/* Mid-TOP 위치 */
+.content-mid-top {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid purple; */
+    display: flex;
+    /*
+        display : 화면을 배치하는 방법
+            flex : 기본적으로 아이템을 가로 방향으로 배치한다
+            inline-flex : 화면에 표시되는 만큼 가로방향 배치
+            자세한건 개념정리 flex부분 참고
+    */
+}
+.content-mid-left {
+    width: 50%;
+    height: auto;
+    /* border: 2px solid red; */
+}
+.content-mid-left>img {
+    width: 658px;
+    height: 827px;
+    margin: 0 109px;
+    margin-top: 70px;
+}
+.content-mid-top .mid-text>span {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.content-mid-top .mid-text {
+    /* border: 3px solid slategrey; */
+    margin: 0px 109px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.content-mid-top .mid-text>span:nth-child(1) {
+    font-size: 40px;
+    color: orange;
+    font-weight: 700;
+}
+.content-mid-top .mid-text>span:nth-child(2) {
+    font-size: 20px;
+}
+.content-mid-top .mid-text>span:nth-child(3) {
+    font-size: 20px;
+}
+
+
+.content-mid-right {
+    width: 50%;
+    height: auto;
+    /* border: 2px solid orange; */
+}
+.content-mid-right img {
+    width: 879px;
+    height: 641px;
+    margin-left: -50px;
+}
+
+
+
+/* Mid-bottom 위치 */
+.content-mid-bottom {
+    width: 100%;
+    /* border: 2px solid crimson; */
+    display: flex;
+}
+
+.bottom-left {
+    width: 50%;
+    /* border: 2px solid violet; */
+    padding-top: 50px;
+    position: relative;
+    /*
+        position : HTML 문서 상에서 아이템이 배치되는 방식
+            static : (기본값) 원래 있어야 하는 위치에 배치하며 단 속성값(top,left,bottom,right)을 무시함
+            relative : 원래 위치를 기준에서 상대적으로 배치하며 속성값(top,left,bottom,right)를 이용해서 이동 가능
+            absolute : 상위 아이템(부모)를 기준으로 절대적으로 배치됨(보통 부모의 position을 relative로 사용하는 식으로 함)
+            fixed : 아이템을 뷰포트(전체화면) 기준 고정된 위치에 배치하는 방식이며 속성값(top,left,bottom,right)를 이용하여 결정
+            sticky : fixed의 하위개념으로 부모의 범위를 벗어나면 fixed가 해제되는 방식
+    */
+}
+.bottom-left img:nth-child(1) {
+    width: 800px;
+    height: 583px;
+    margin-left: 50px;
+    margin-bottom: 300px ;
+}
+.bottom-left img:nth-child(2) {
+    width: 325px;
+    height: 408px;
+    position: absolute;
+    right: 0; top: 425px;
+}
+
+.bottom-right {
+    width: 50%;
+    /* border: 2px solid peru; */
+    margin-top: 10%;
+}
+.bottom-right .bottom-text {
+    /* border: 2px solid red; */
+    margin: 0 123px;
+}
+.bottom-right .bottom-text>p {
+    /* border:1px solid black; */
+    display: flex;
+}
+
+.bottom-text {
+    width: 700px;
+    /* border: 1px solid black; */
+}
+/* p1의 자식요소 */
+.bottom-right .bottom-text>p:nth-child(1) {
+    width: auto;
+    align-items: center;
+    /*
+        align-items : 아이템의 내부 세로축 관계 정렬 상태를 설정(flex와 같이 사용)
+        개념정리 flex 부분을 참고
+    */
+
+    margin-bottom: 5%;
+    /* border: 1px solid black; */
+}
+.bottom-right .bottom-text>p:nth-child(1)>span:nth-child(1) {
+    border-bottom: 1px solid #ff812c;
+    margin-left: 5%;
+    font-size: 150px;
+    color: #ff812c;
+    font-family: 'C-Light';
+    line-height: 130px;
+}
+.bottom-right .bottom-text>p:nth-child(1)>span:nth-child(2) {
+    /* border: 1px solid black; */
+    font-size: 24px;
+    color: #ff812c;
+    margin-top: 40px;
+    padding-left: 3%;
+    text-align: left;
+    letter-spacing: -3px;
+}
+
+/* p2의 자식요소 */
+.bottom-right .bottom-text>p:nth-child(2) {
+    width: auto;
+    align-items: center;
+    font-size: 30px;
+    /* border: 1px solid black; */
+}
+.bottom-right .bottom-text>p:nth-child(2)>span {
+    /* border:1px solid black; */
+    font-size: 72px;
+    color: #ff812c;
+    font-family: 'C-Medium';
+    font-style: oblique;
+    display: block;
+    line-height: 90px;
+    height: 100px;
+}
+
+/* p3의 자식요소 */
+.bottom-right .bottom-text>p:nth-child(3) {
+    width: auto;
+    align-items: center;
+    display: block;
+    /* border: 1px solid black; */
+}
+.bottom-right .bottom-text>p:nth-child(3)>span {
+    /* border:1px solid black; */
+    font-size: 19px;
+    text-align: left;
+    font-family: 'Noto Sans KR';
+}
+
+
+
+/* Content-Bottom 구간 */
+#content-bottom{
+    background-image: url('../image/KakaoTalk_20221214_114740406.jpg');
+    background-size: cover;
+    /* border: 2px solid darkblue; */
+    position: relative;
+}
+
+#content-bottom-title{
+    padding: 5px;
+    padding-top: 100px;
+}
+#content-bottom-title>span,p {
+    display: block;
+    text-align: center;
+}
+#content-bottom-title>span:nth-child(1){
+    /* border: 1px solid black; */
+    font-size: 120px;
+    font-family: 'C-Light';
+    font-style: oblique;
+    position: absolute;
+    left: 453px; top: 30px;
+    margin: 0;
+    color: lightgray;
+    opacity: 0.4;
+}
+#content-bottom-title>span:nth-child(2){
+    /* border: 1px solid black; */
+    font-size: 70px;
+    font-weight: 900;
+    color: white;
+    letter-spacing:-5.5px;
+    /*
+        letter-spacing : 글자간의 간격을 지정하는 방법
+            px,em,% 등을 이용하여 변경(음수 사용시 간격을 줄임)
+    */
+
+    z-index: 1;
+    /*
+        z-index : position속성을 사용중인 아이템에 대해 z축의 위치(앞뒤)순서를 정하며 숫자가 크면 앞으로 온다, position이 설정되지 않은 요소는 맨 뒤로 간다
+    */
+
+    margin-bottom: 35px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#content-bottom-title>p{
+    /* border: 1px solid black; */
+    font-size: 28px;
+    color: white;
+    letter-spacing:-1.5px;
+    margin: 0 auto;
+}
+
+
+/* SLIDE 구간 */
+#content-bottom-slide{
+    width: 100%;
+    height: auto;
+    /* background-color: steelblue; */
+    padding: 150px 200px;
+}
+
+#content-bottom-slide img{
+    position: relative;
+    width:100%;
+    height: 90%;
+}
+
+#content-bottom-slide>div:nth-child(2) {
+    width: 100%;
+    height: 653px;
+}

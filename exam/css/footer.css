@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+footer {
+    width: 100%;
+    height: 757.047px;
+    background-color: #151515;
+    font-family: NexonMaplestory;
+}
+#footer-wrap {
+    width: 1500px;
+    height: 467.047px;
+    margin: 0 auto;
+    /* border: 2px solid orange; */
+    position: relative;
+}
+
+/* footer 로고 부분 */
+#footer-Logo {
+    height: 72px;    
+    color: white;
+    border-bottom: 1px solid rgb(102,102,102);
+}
+#footer-Logo>img {
+    display: block;
+    width: 200px;
+    height: auto;
+    transform: translateX(10%) translateY(10px);
+    /* border: 1px solid turquoise; */
+}
+
+
+
+/* FOOTER-TOP 구간 */
+#footer-wrap>#footer-top {
+    width: 1500px;
+    height: 23px;
+    /* border: 1px solid rgb(255, 15, 15); */
+    float: left;
+    margin-top: 30px;
+}
+#footer-wrap>#footer-top>a {
+    width: auto;
+    height: auto;
+    /* border: 1px solid white; */
+    display: block;
+    float: left;
+    color: gray;
+    margin-right: 20px;
+}
+/* #footer-wrap>#footer-top>a:nth-child(3) {
+    width: 80px;
+    height: auto;
+} */
+#footer-wrap>#footer-top>span {
+    width: auto;
+    height: auto;
+    /* border: 1px solid white; */
+    display: block;
+    float: left;
+    text-align: center;
+    color: gray;
+    margin-left: 10px;
+}
+
+#footer-wrap>span {
+    width: 1500px;
+    height: auto;
+    /* border: 1px solid white; */
+    color: gray;
+    float: left;
+    display: block;
+}
+
+/* 하단 바텀구간 */
+#footer-bottom {
+    width: 1500px;
+    height: 224px;
+    /* border: 1px solid palevioletred; */
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+
+.Copyright {
+    color: white;
+    margin-top: 70px;
+}
+
+/* footer-bottom구간 info-content 영역 */
+.info-content>p {
+    font-size: 13px;
+    display: flex;
+    margin-bottom: 4px;
+}
+
+/* p2 부모요소 */
+.info-content>p:nth-child(2) {
+    display: flex;
+}
+
+/* 가상선택자 */
+.info-content>p:nth-child(2)>span:nth-child(2)::before {
+    width: 2px;
+    height: 11.5px;
+    background-color: gray;
+    content: '';
+    display: inline-block;
+    margin: 0 20px;
+}
+.info-content>p:nth-child(2)>span:nth-child(3)::before {
+    width: 2px;
+    height: 11.5px;
+    background-color: gray;
+    content: '';
+    display: inline-block;
+    margin: 0 20px;
+}
+
+/* p3 부모요소 */
+.info-content>p:nth-child(3)>span:nth-child(2)::before {
+    width: 2px;
+    height: 11.5px;
+    background-color: gray;
+    content: '';
+    display: inline-block;
+    margin: 0 20px;
+}
+
+
+/* hover 구간 */
+#footer-wrap>#footer-top>a:hover {
+    color: white;
+}
+
+

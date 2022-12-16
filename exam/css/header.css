@@ -1,0 +1,170 @@
+/* body {
+    background-color: slateblue;
+} */
+.logo>img{
+    width: 300px;
+    height: 93.39px;
+    text-align: center;
+    /* border: 1px solid red; */
+    display: block;
+    line-height: 80px;
+}
+#header{
+    width: 100%;
+    height: 93.39px;
+    /* border: 1px solid black; */
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#main-menu{
+    width: 50%;
+    height: 93.39px;
+    /* border: 3px solid rgb(63, 189, 105); */
+    /* background-color: slategray; */
+    margin: 0 auto;
+    margin-left: 150px;
+}
+.sub-menu1{
+    width: 700px;
+    height: 93.39px;
+    /* border: 2px solid blue; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-family:'Noto Sans KR', sans-serif;
+}
+
+.sub-menu1>li{
+    width: 120px;
+    height: 93.39px;
+    /* border: 2px solid rgb(255, 26, 217); */
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.sub-menu1>li>a{
+    height: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-main {
+    height: 100%;
+    /* border: 2px solid rgb(0, 255, 21); */
+    /* position: relative; */
+    display: flex;
+    justify-content: left;
+}
+.all-main>#checkbtn {
+    display: none;
+}
+
+.all-main>label {
+    cursor:pointer;
+    /* border: 1px solid black; */
+}
+
+/* 클릭 메뉴 */
+.all-menual {
+    width: 100%;
+    height: 0;
+    /* border: 2px solid royalblue; */
+    position: absolute;
+    top: 100%; left: 0;
+    z-index: 1;
+    background-color: white;
+    overflow: hidden;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+}
+
+/* .all-sub-menual2 {
+    width: auto;
+    height: auto;
+    border: 3px solid black;
+    display: flex;
+    margin: 0 auto;
+} */
+.subtitle {
+    width: 188px;
+    height: 0;
+    margin: 20px;
+    padding: 50px;
+    font-weight: 700;
+    border-bottom: 2px solid black;
+}
+
+/* 전체메뉴 클릭시 호출 */
+#checkbtn:checked~.all-menual {
+    display: flex;
+    height: 470px;
+    transition: height 1s;
+}
+
+/* ///////////////////////////// */
+
+/* Hover 글자바꾸기 */
+#header .sub-menu1>li:nth-child(2)>a:hover {
+    font-size: 0;
+}
+#header .sub-menu1>li:nth-child(2)>a:hover::before {
+    content: '이벤트';
+    font-size: 1rem;
+}
+#header .sub-menu1>li:nth-child(3)>a:hover {
+    font-size: 0;
+}
+#header .sub-menu1>li:nth-child(3)>a:hover::before {
+    content: '고객만족센터';
+    font-size: 1rem;
+}
+#header .sub-menu1>li:nth-child(4)>a:hover {
+    font-size: 0;
+}
+#header .sub-menu1>li:nth-child(4)>a:hover::before {
+    content: '공지이슈';
+    font-size: 1rem;
+}
+/* 현재 font를 사라지고 */
+#header .sub-menu1>li:nth-child(5)>a:hover {
+    font-size: 0;
+}
+/* 추가한 가상선택자가 추가한다 */
+#header .sub-menu1>li:nth-child(5)>a:hover::before {
+    content: '지정안내';
+    font-size: 1rem;
+}
+
+/* 링크 추가된 것 */
+#hiddenlink {
+    height: 93.38px;
+    width: 300px;
+}
+#hiddenlink>a {
+    color: black;
+    display: block;
+    /* background-color: aqua; */
+    text-align: center;
+    line-height: 90px;
+}
+
+#hiddenlink>a{
+    display: none;
+}
+
+
+#hiddenlink:hover  a{
+    display: block;
+}

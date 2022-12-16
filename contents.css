@@ -1,0 +1,470 @@
+/* 폰트 적용 */
+/* font-face 폰트 패밀리를 사용하기 위해 웹에서 다운로드 받은 폰트를 지정해준다 */
+@font-face {
+    /* font-family : 입력시 폰트를 사용할 수 있다. 기본일 경우 sans-selif */
+    font-family:'C-Light';
+    /* font가 저장된 장소. */
+    src:url('../font/CormorantGaramond-Light.ttf')
+}
+@font-face {
+    font-family:'C-Medium';
+    src:url('../font/CormorantGaramond-Medium.ttf')
+}
+/* p와 span 태그 속성 변화 */
+p,span {
+    /* display : block : 태그 속성에 block 기능을 준다.(쓸 때 마다 밑으로 내려가게 만들어줌) */
+    display: block;
+}
+
+/* class 가 contents 인 요소 변화 */
+.contents{
+    /* 넓이 100% */
+    width: 100%;
+    /* height auto : 자동으로 높이를 width 에 맞게 맞춰준다 */
+    height: auto;
+    /* 외부 요소 테두리 밖 부터 위에 부분만 93px만큼 거리루 준다. */
+    margin-top:93px;
+}
+
+/* id가 content-top,mid,bottom 변화 */
+#content-top,#content-mid,#content-bottom
+{
+    /* 넓이 100% */
+    width: 100%;
+}
+
+
+/* Content-TOP!! */
+#content-top{
+    /* border: 1px solid black; */
+    /* 높이 900px 만큼 */
+    height: 900px;
+    /* 이 요소에서의 바탕에 이미지를 부여한다 */
+    background-image:url('../image/KakaoTalk_20221214_114740406.jpg') ;
+    /* 지정한 바탕 이미지 사이즈를 화면에 맞게 다 덮는다. */
+    background-size: cover;
+    /* 내부 content-top부분 17%만쿰 거리를 준다 */
+    padding-top: 17%;
+}
+/* id가 content-top 안에 있는 이미지에게 */
+#content-top>img {
+    /* 높,넓이 100%로 */
+    width: 100%;
+    height: 100%;
+}
+/* id가 content-top에 클래스가 top-text 인 요소 변화  */
+#content-top .top-text {
+    /* border: 1px solid black; */
+}
+/* class가 top-text인 요소 변화 */
+.top-text {
+    /* 넓이 100% */
+    width: 100%;
+}
+/* clas가 top-text 인 span인 요소에게 */
+.top-text span{
+    /* display 속성을 block 처리 */
+    display: block;
+    /* 폰트 색깔 흰색 */
+    color: white;
+    /* margin-bottom: 10px; */
+    /* 내부 요소 20px 간격준다. */
+    padding: 20px;
+}
+/* class가 top-text안의 span인데 1번째 span요소 변화 */
+.top-text>span:nth-child(1){
+    /* border: 1px solid black; */
+    /* 글자를 중간으로 준다 */
+    text-align: center;
+    /* 글자 크기 변화 */
+    font-size: 41px;
+    /* 어떤 글자를 쓸것인지. */
+    font-family: 'C-Light';
+    
+}
+/* class가 top-text안의 span인데 2번째 span요소 변화 */
+.top-text>span:nth-child(2){
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 28px;
+}
+/* class가 top-text안의 span인데 3번째 span요소 변화 */
+.top-text>span:nth-child(3){
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+
+/* Content-Mid 구간 */
+/* id가 content-mid인 요소 변화 */
+#content-mid{
+    height: auto;
+    /* background-color: aqua; */
+}
+
+/* Mid-TOP 위치 */
+/* class가 content-mid-top 인 요소 변화 */
+.content-mid-top {
+    /* 넓이 */
+    width: 100%;
+    /* 높이 */
+    height: auto;
+    /* border: 2px solid purple; */
+    /* display : flex 를 쓰게 되면 좌우로 쓸 수 있게 된다. */
+    display: flex;
+}
+/* classrk content-mid-left 인 요소 변화 */
+.content-mid-left {
+    /* 넓이 50%만 */
+    width: 50%;
+    /* 높이 */
+    height: auto;
+    /* border: 2px solid red; */
+}
+/* class가 content-mid-left 안의 img 요소 변화 */
+.content-mid-left>img {
+    /* 넓이 */
+    width: 658px;
+    /* 높이 */
+    height: 827px;
+    /* img 바깥쪽 넓이 */
+    margin: 0 109px;
+    /* img 바깥쪽 위의 영역만  */
+    margin-top: 70px;
+}
+/* class가 content-mid-top 의 midtext안의 span에게 */
+.content-mid-top .mid-text>span {
+    /* 넓이 */
+    width: 100%;
+    /* span 바깥쪽 아랫여백 줌 */
+    margin-bottom: 25px;
+}
+/* class가 content-mid-top mid-text 인 요소 변화 */
+.content-mid-top .mid-text {
+    /* border: 3px solid slategrey; */
+    /* 바깥쪽 여백 */
+    margin: 0px 109px;
+    /* 윗여백 */
+    margin-top: 60px;
+    /* 밑 여백 */
+    margin-bottom: 20px;
+}
+/* class가 content-mid-top mid-text안의 span태그인데 1번째 스팬태그만 */
+.content-mid-top .mid-text>span:nth-child(1) {
+    /* 글자 크기 */
+    font-size: 40px;
+    /* 색깔 */
+    color: orange;
+    /* 글자 굵기 설정 */
+    font-weight: 700;
+}
+/* class가 content-mid-top mid-text안의 span 태그인데 2번쨰 span태그만 */
+.content-mid-top .mid-text>span:nth-child(2) {
+    /* 글자 크기 */
+    font-size: 20px;
+}
+/* 윗 상황에서 3번째 span 태그 */
+.content-mid-top .mid-text>span:nth-child(3) {
+    /* 글자 크기 */
+    font-size: 20px;
+}
+
+/* class가 content-mid-right인 요소 변화 */
+.content-mid-right {
+    /* 넓이 */
+    width: 50%;
+    /* 높이 */
+    height: auto;
+    /* border: 2px solid orange; */
+}
+/* class가 content-mid-right 의 이미지 변화 */
+.content-mid-right img {
+    /* 넓이 */
+    width: 879px;
+    /* 높이 */
+    height: 641px;
+    /* 왼쪽 여백만 변화 */
+    margin-left: -50px;
+}
+
+
+
+/* Mid-bottom 위치 */
+/* class가  content-mid-bottom 인 요소 선택 */
+.content-mid-bottom {
+    /* 넓이 */
+    width: 100%;
+    /* border: 2px solid crimson; */
+    /* display : flex로 줘서 좌우로 사용 가능하게 만들어준다. */
+    display: flex;
+}
+
+/* class가 bottom-left 인 요소 변화 */
+.bottom-left {
+    /* 넓이 */
+    width: 50%;
+    /* border: 2px solid violet; */
+    /* 안쪽 윗쪽 여백 변화 */
+    padding-top: 50px;
+    /* position:relative : 요소 자신을 기준으로 배치한다. */
+    position: relative;
+}
+/* class가 bottom-left 의 이미지인데 1번째 이미지 */
+.bottom-left img:nth-child(1) {
+    /* 넓이 */
+    width: 800px;
+    /* 높이 */
+    height: 583px;
+    /* 내부 왼쪽 여백 */
+    margin-left: 50px;
+    /* 내부 바깥쪽 여백 */
+    margin-bottom: 300px ;
+}
+/* 윗 내용에서 2번쨰 이미지 */
+.bottom-left img:nth-child(2) {
+    /* 넓이 */
+    width: 325px;
+    /* 높이 */
+    height: 408px;
+    /* position:absolut : 부모 요소를 기준으로 배치한다. */
+    position: absolute;
+    /* 오른쪽, 윗쪽 변화 */
+    right: 0; top: 425px;
+}
+/* class가 bottom-right 인 요소 변화 */
+.bottom-right {
+    /* 넓이 */
+    width: 50%;
+    /* border: 2px solid peru; */
+    /* 안쪽 위 여백 */
+    margin-top: 10%;
+}
+/* class가 오른쪽이면서 bottom-text 클래스도 가지고 있어야 한다. */
+.bottom-right .bottom-text {
+    /* border: 2px solid red; */
+    /* 외부 여백 변화 */
+    margin: 0 123px;
+}
+/* class가 bottom-right이면서 bottom-text안의 p 태그 변화 */
+.bottom-right .bottom-text>p {
+    /* border:1px solid black; */
+    /* display를 변화를 줘서 좌우로 사용 가능 */
+    display: flex;
+}
+
+
+/* class가 bottom-text 인 요소 변화 */
+.bottom-text {
+    /* 넓이 */
+    width: 700px;
+    /* border: 1px solid black; */
+}
+
+/* p1의 자식요소 */
+/* class가 bottom-right 이면서 bottom-text안의 p태그이지만 1번째 태그 */
+.bottom-right .bottom-text>p:nth-child(1) {
+    /* 넓이 */
+    width: auto;
+    /* 정렬기능 : aling-items : center로 주게 되면 상하 중간으로 준다 */
+    align-items: center;
+    margin-bottom: 5%;
+    /* border: 1px solid black; */
+}
+
+/* class갸 bottom-right이며 bottom-text안의 p태그중 1번째안의 span인데 1번째 스팬 요소 변화 */
+.bottom-right .bottom-text>p:nth-child(1)>span:nth-child(1) {
+    /* 테두리 1px로 실선 준다. */
+    border-bottom: 1px solid #ff812c;
+    /* 외부 여백 5% 간격 추가 */
+    margin-left: 5%;
+    /* 글자 크기 변화 */
+    font-size: 150px;
+    color: #ff812c;
+    font-family: 'C-Light';
+    /* 줄높이를 정해준다 */
+    line-height: 130px;
+}
+/* 위의 요소 중 2번째 스팬 요소 변화 */
+.bottom-right .bottom-text>p:nth-child(1)>span:nth-child(2) {
+    /* border: 1px solid black; */
+    /* 글자 크기 */
+    font-size: 24px;
+    /* 글자 색깔 */
+    color: #ff812c;
+    /* 윗쪽 여백 */
+    margin-top: 40px;
+    /* 안쪽 왼쪽 여백 */
+    padding-left: 3%;
+    /* 글자를 왼쪽부터 시작하게 만들어준다 */
+    text-align: left;
+    /* 글자 간격을 수정한다. */
+    letter-spacing: -3px;
+}
+
+/* p2의 자식요소 */
+/* class가 bottom-right 이며 bottom-text 안의 p태그2번째 p태그 요소 변화 */
+.bottom-right .bottom-text>p:nth-child(2) {
+    /* 넓이 */
+    width: auto;
+    /* 상하 중간으로 */
+    align-items: center;
+    /* 글자 크기 */
+    font-size: 30px;
+    /* border: 1px solid black; */
+}
+
+/* 윗 내용 동일인 상황 p 태그 안의 span 요소 변화 */
+.bottom-right .bottom-text>p:nth-child(2)>span {
+    /* border:1px solid black; */
+    /* 글자 크기 */
+    font-size: 72px;
+    /* 글자 색깔 */
+    color: #ff812c;
+    /* 글자 체 설정 */
+    font-family: 'C-Medium';
+    /* 글자 모양을 선택한다. */
+    font-style: oblique;
+    /* 사용마다 상하 내려간다. */
+    display: block;
+    /* 줄높이 정해준다 */
+    line-height: 90px;
+    /* 높이 */
+    height: 100px;
+}
+
+/* p3의 자식요소 */
+/* class가 bottom-right bottom-text 안의 p태그이지만 3번째 p태그만 변화를 준다. */
+.bottom-right .bottom-text>p:nth-child(3) {
+    /* 넓이 */
+    width: auto;
+    /* 상하 관계 정렬 */
+    align-items: center;
+    /* block 을 쓰면 상하로 내려가게 된다. */
+    display: block;
+    /* border: 1px solid black; */
+}
+/* 윗내용 동일인 상황 . p태그 3번째 p태그 안의 span요소 변화 */
+.bottom-right .bottom-text>p:nth-child(3)>span {
+    /* border:1px solid black; */
+    /* 글자 크기 변화 */
+    font-size: 19px;
+    /* 글자 시작 왼쪽 */
+    text-align: left;
+    /* 글자 체 변화 */
+    font-family: 'Noto Sans KR';
+}
+
+
+
+/* Content-Bottom 구간 */
+/* id가 content-bottom인 요소 변화 */
+#content-bottom{
+    /* content-bottom 요소 에다 바탕색 준다. */
+    background-image: url('../image/KakaoTalk_20221214_114740406.jpg');
+    /* 남는 부분 없도록 꽉 채운다. */
+    background-size: cover;
+    /* border: 2px solid darkblue; */
+    /* content-bottom 을 기준으로 정렬한다. */
+    position: relative;
+}
+
+
+/* id가 content-bottom-title 요소 변화 */
+#content-bottom-title{
+    /* 내부 여백 5px씩 */
+    padding: 5px;
+    /* 윗 여백 5px씩 */
+    padding-top: 100px;
+}
+/* 윗 내용동일인 상황. 안의 span,p태그 요소 변화 */
+#content-bottom-title>span,p {
+    /* 다 쓸때마다 내려간다. */
+    display: block;
+    /* 글자 시작 중간에서 */
+    text-align: center;
+}
+/* 윗내용 동일인 상황. span 태그 1번째 스팬 태그만 변화를 준다. */
+#content-bottom-title>span:nth-child(1){
+    /* border: 1px solid black; */
+    /* 글자색 변화 */
+    font-size: 120px;
+    /* 글자 체 변경 */
+    font-family: 'C-Light';
+    /* 글자 모양 선택 */
+    font-style: oblique;
+    /* 부모 요소를 기준으로 정렬한다.(고정느낌?) */
+    position: absolute;
+    /* 왼쪽,위 변화 */
+    left: 453px; top: 30px;
+    /* 여백 x */
+    margin: 0;
+    /* 글자색 */
+    color: lightgray;
+    /* 요소 투명도 */
+    opacity: 0.4;
+}
+/* 윗내용동일인 상황에서 span 2번재 스팬만 변화 */
+#content-bottom-title>span:nth-child(2){
+    /* border: 1px solid black; */
+    /* 글자크기 */
+    font-size: 70px;
+    /* 글자 굵기 */
+    font-weight: 900;
+    /* 색깔 */
+    color: white;
+    /* 글자 사이 간격 조절. */
+    letter-spacing:-5.5px;
+    /* 먼저 보여질 우선도 설정 */
+    z-index: 1;
+    /* 밑부분 여백 준다 */
+    margin-bottom: 35px;
+    /* 여백 기본은 없으나 알아서 준다. */
+    margin: 0 auto;
+    /* 윗부분 여백 */
+    margin-bottom: 10px;
+}
+/* id가 content-bottom-title안의 p태그 변화 */
+#content-bottom-title>p{
+    /* border: 1px solid black; */
+    /* 글자 크기 */
+    font-size: 28px;
+    /* 글자 색 */
+    color: white;
+    /* 글자 사이 간격 조절 */
+    letter-spacing:-1.5px;
+    /* 여백 알아서  */
+    margin: 0 auto;
+}
+
+
+/* SLIDE 구간 */
+/* id가 content-bottom-slide인 요소 변화 */
+#content-bottom-slide{
+    /* 넓이 */
+    width: 100%;
+    /* 높이 */
+    height: auto;
+    /* background-color: steelblue; */
+    /* 내부 여백 조정 */
+    padding: 150px 200px;
+}
+
+/* id가 content-bottom-slide 의 이미지 변화 */
+#content-bottom-slide img{
+    /* relative : 본인을 기준으로 자리를 잡느다. */
+    position: relative;
+    /* 넓이 */
+    width:100%;
+    /* 높이 */
+    height: 90%;
+}
+
+/* id가 content-bottom-slide 안의 div요소이나 2번째 div 요소만 변화 */
+#content-bottom-slide>div:nth-child(2) {
+    /* 넓이 */
+    width: 100%;
+    /* 높이 */
+    height: 653px;
+}

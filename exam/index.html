@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--
+    DOCTYPE
+    선언된 페이지의 HTML 버전이 무엇인지 웹 브라우저에 알려주는 역할을 하는 선언문
+-->
+
+<html lang="ko">
+<!--
+    lang="언어"
+    해당 HTML의 언어를 선언
+-->
+
+
+
+<head>
+    <!--
+        head 태그는 해당 문서에 대한 정보인 metadata 의 집합을 정의할때 사용
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        meta 태그는 해당 문서에 대한 정보인 metadata를 정의할때 사용
+    -->
+
+    <title>Document</title>
+    <!--
+        Title 태그는 해당 문서의 제목을 정의
+    -->
+
+    <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/contents.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!--
+        link 태그는 해당 문서와 외부 소스 사이의 관계를 정의할때 사용
+        주로 외부 스타일 시트를 연결할때 사용한다(대표적으로 css)
+    -->
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="js/content-bottom-slide.js"></script>
+    <!--
+        script 태그는 자바스크립트같은 클라이언트 사이드 스크립트를 정의할때 사용
+        *클라이언트 사이드 : 클라이언트(사용자)가 처리하는것 - (대표적으로 javascript)
+        *클라이언트 사이드 스크립트 : 클라이언트 사이드에서 실행되는 스크립트 언어
+    -->
+</head>
+
+<body>
+    <!--
+        body태그는 해당 HTML 문서의 텍스트,하이퍼링크,이미지,리스트 등
+        모든 컨텐츠를 포함하는 영역을 정의
+    -->
+
+    <div id="wrap">
+        <!--
+            div태그는 HTML문서에서 특정 영역(division)이나 구획(section)을 정의한다
+            여러 요소들을 묶어 CSS로 스타일을 바꾸거나 자바스크립트에 써먹음
+        -->
+
+        <!-- 헤더 부분 -->
+        <div id="header">
+            <div class="logo">
+                <a href="합체.html"><img src="image/logo.png" alt="LOGO"></a>
+                <!--
+                    a태그는 하이퍼링크를 정의한다
+                    href : URL을 명시
+                    target : 링크된 문서를 클릭했을때 열리는 위치를 명시
+                        _blank : 새로운 윈도우나 탭에서 오픈
+                        _self :(기본값)현재 프레임에서 오픈
+                        _parent : 현재 프레임의 부모 프레임에서 오픈
+                    type : 링크된 문서의 미디어타입을 명시
+                -->
+
+
+            </div>
+            <div id="main-menu">
+                <ul class="sub-menu1">
+                    <!--
+                        ul 태그는 순서가 없는 HTML 리스트를 정의할때 사용
+                        (순서가 있는 ol 태그)
+                        ul안에 들어가는 아이템은 li 태그를 사용한다
+                        li옆에 검정색의 원이나 사각형의 기본 마커가 붙는다
+                    -->
+
+                    <li class="all-main">
+                        <!--
+                            li 태그는 HTML 리스트에 포함되는 item을 정의
+                            기본 마커는 css를 사용하면 바꾸거나 없앨 수 있음.
+                        -->
+
+                        <input id="checkbtn" type="checkbox">
+                        <label for="checkbtn">클릭메뉴1</label>
+                        <ul class="all-menual">
+                            <!-- <div class="all-sub-menual2"> -->
+                            <li class="subtitle">SUB-Menu</li>
+                            <li class="subtitle">SUB-Menu</li>
+                            <li class="subtitle">SUB-Menu</li>
+                            <li class="subtitle">SUB-Menu</li>
+                            <li class="subtitle">SUB-Menu</li>
+                            <!-- </div> -->
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">메뉴2</a></li>
+                    <li><a href="javascript:void(0)">메뉴3</a></li>
+                    <li><a href="javascript:void(0)">메뉴4</a></li>
+                    <li><a href="javascript:void(0)">메뉴5</a></li>
+                </ul>
+            </div>
+            <div id="hiddenlink">
+                <a href="https://choideokhyeon.github.io/Maplestory.github.io/" target="_blank">찾아보시지</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- content-body -->
+    <div class="contents">
+        <div id="content-top">
+            <div class="top-text">
+                <span>Skin Booster</span>
+                <span>근원적인 피부재생을 목표로</span>
+                <span>스킨부스터 클리닉</span>
+                <!--
+                    span 태그는 HTML 문서에서 인라인 요소들을 하나로 묶을때 사용
+                        *인라인 요소는 블록 요소 안에 포함되어 있으며,
+                        width,height가 적용되지 않는다(line-height,text-align 사용)
+                        *인라인요소 종류(대표적) : a,button,i,img,input,label,select,span
+                -->
+            </div>
+        </div>
+
+        <div id="content-mid">
+            <div class="content-mid-top">
+                <div class="content-mid-left">
+                    <img src="./image/KakaoTalk_20221214_120219613_03.png" alt="">
+                    <!--
+                        img 태그는 HTML 문서에 이미지를 정의할때 사용
+                        내부의 src에 이미지의 URL을 링크 시켜서 사용
+                    -->
+
+                    <div class="mid-text">
+                        <span>피 / 부 / 저 / 력<br>근원에 집중해야 개선됩니다.</span>
+                        <span>온도 변화,중력,마참,시간을 포함한<br>외부 자극을 견뎌내는 피부 본연의 힘을 높일 때</span>
+                        <span>비로소 당신의 피부는<br>노화가 아닌 진화로 거듭납니다.</span>
+                    </div>
+                </div>
+
+                <div class="content-mid-right">
+                    <div class="mid-text" style="margin:110px 60px; margin-bottom:200px">
+                        <span>지금 당신의 피부,<br>진화가 아닌 노화.</span>
+                        <span>탄력 잃고 주름 잡힌 노화의 흔적<br>레이저 시술만이 정답일까요?</span>
+                        <span>
+                            콜라겐, 비타민C, 글루타치온 · · ·<br>
+                            내 몸을 위한 영양제는 ‘섭취’하면서<br>
+                            정작 피부는 ‘방치’한다면?
+                        </span>
+                    </div>
+                    <img src="./image/KakaoTalk_20221214_120219613_02.png" alt="">
+                </div>
+            </div>
+            <div class="content-mid-bottom">
+                <aside class="bottom-left">
+                    <!--
+                        aside 태그는 해당 콘텐츠로 분리 가능한 콘텐츠로 구성된 페이지 영역을 정의
+                        구역을 만드는 태그의 일종(header,nav,section,footer 등)이며
+                        사이드메뉴나 본문과 구분되는 별도의 구역을 만드는데 사용한다
+                    -->
+
+                    <img src="./image/KakaoTalk_20221214_120219613.png" alt="">
+                    <img src="./image/KakaoTalk_20221214_120219613_01.png" alt="">
+                </aside>
+                <aside class="bottom-right">
+                    <div class="bottom-text">
+                        <p>
+                            <!--
+                                p태그는 문단을 정의할때 사용
+                                위 아래에 약간의 여백이 추가됨(CSS로 변경 가능)
+                            -->
+
+                            <span>01</span><span>대담한 변화,<br>확실한 피부개선을 위한</span>
+                        </p>
+                        <p>잇츠미의원&nbsp;<span>Delicate</span>&nbsp;&nbsp;진단처방</p>
+                        <p>
+                            <span>- 피부 조직의 두께,치밀도,탄력도,연령,노화도를 고려한 피부 타입별 맞춤 처방</span><br>
+                            <span>- 시술 후 7일, 14일 30일. 피부 턴오버 주기별 스킨부스터를 맞춤 제안</span><br>
+                            <span>- 강력한 유효성분이 활성화되는 정확한 타겟층에 주입</span><br>
+                            <span>- 숙련된 의사의 정품 · 정량 · 완제품 · 진심 시술</span>
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div id="content-bottom">
+            <div id="content-bottom-title">
+                <span>IT'S ME</span>
+                <span>잇츠미의원 스킨부스터 클리닉</span>
+                <p>잇츠미의원은 공인된 브랜드의 정품만을 취급하며 각 브랜드사의 가이드와<br>
+                    잇츠미의원만의 자체 임상 결과를 준수하여 개별화된 스킨부스터 시술을 시행합니다.</p>
+            </div>
+
+            <div id="content-bottom-slide">
+                <div class="swiper1">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="image/slide-img/banner1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="image/slide-img/banner2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="image/slide-img/banner3.png" alt=""></div>
+                            <div class="swiper-slide"><img src="image/slide-img/banner4.png" alt=""></div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 부분 -->
+        <footer>
+            <div id="footer-wrap">
+                <div id="footer-Logo">
+                    <img src="image/logo.png" alt="logo">
+                </div>
+
+                <div id="footer-top">
+                    <a href="javascript:void(0)">회사 소개</a>
+                    <a href="javascript:void(0)">서비스 소개</a>
+                    <a href="javascript:void(0)">점포 안내</a>
+                    <a href="javascript:void(0)">자주하는 질문</a>
+                    <span>제휴문의:content.itsme.clinic@gmail.com</span>
+                </div>
+                <div class="Copyright">
+                    <span>
+                        Copyright 2022.잇츠미클리닉 all rights reserved.
+                    </span>
+                </div>
+
+                <div id="footer-bottom">
+                    <div class="info-content">
+                        <p>ㅇㅇ 주식회사</p>
+                        <p>
+                            <span>사업주 : ㅇㅇㅇ</span>
+                            <span>사업장소재지 : 여기는 주소 영역입니다.</span>
+                            <span>사업자등록번호 : <a
+                                    href="javascript:void(window.open('http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=7118101637','communicationViewPopup','width=750,height=700,scrollbars=yes'))"
+                                    class="line">711-81-01637</a></span>
+                        </p>
+                        <p>
+                            <span>개인정보보호책임자 : ㅇㅇㅇ, <a class="line" href="https://naver.com" target="_blank">클릭시 페이지로
+                                    넘어가게 됨.</a></span>
+                            <span>연락처 02-2174-2600</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
