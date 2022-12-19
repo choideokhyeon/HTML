@@ -175,6 +175,7 @@ p,span {
 .content-mid-left {
     width: 50%;
     height: auto;
+    transition: 5s;
     /* border: 2px solid red; */
 }
 .content-mid-left>img {
@@ -197,6 +198,7 @@ p,span {
     font-size: 40px;
     color: orange;
     font-weight: 700;
+    font-family:'NexonMaplestory';
 }
 .content-mid-top .mid-text>span:nth-child(2) {
     font-size: 20px;
@@ -208,7 +210,6 @@ p,span {
 
 .content-mid-right {
     width: 50%;
-    height: auto;
     /* border: 2px solid orange; */
 }
 .content-mid-right img {

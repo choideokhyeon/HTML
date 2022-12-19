@@ -41,6 +41,14 @@ body {
   background-attachment: fixed;
 }
 
+#video{
+  width: 1920px;
+  height: 1080px;
+  background-image: url('../img/videobg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 #index>img{
   width:500px;
   height:auto;
@@ -292,6 +300,7 @@ section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide.swiper-slide-a
   opacity: 1;
   transform: scale(0.8);
   z-index: 10;
+  left:-12%;
 }
 
 section>.main-banner .swiper-button-prev::after,
@@ -333,7 +342,7 @@ section>.main-banner .swiper-button-next {
   }
 
   section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide {
-    left: -20%;
+    left: -7.5%;
   }
 
   header>.inner>.gnb-top>.header-banner>.swiper {
@@ -348,7 +357,7 @@ section>.main-banner .swiper-button-next {
   }
 
   section>.main-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide {
-    left: -25%;
+    left: -7%;
   }
 
   header>.inner>.gnb-top>.header-banner>.swiper {

@@ -34,7 +34,17 @@
   height:30px;
 }
 
+.joinbox .submit-btn{
+  width:100px;
+  height:30px;
+}
+
 #authnum:disabled{
   border: 1px solid #000;
   background-color: gainsboro;
+}
+
+td>span{
+  margin-left: 10px;
+  font-size: 0.8rem;
 }

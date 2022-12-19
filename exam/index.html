@@ -35,6 +35,9 @@
     <link rel="stylesheet" href="./css/contents.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--
         link 태그는 해당 문서와 외부 소스 사이의 관계를 정의할때 사용
         주로 외부 스타일 시트를 연결할때 사용한다(대표적으로 css)
@@ -192,36 +195,36 @@
                     </div>
                 </aside>
             </div>
-        </div>
 
-        <div id="content-bottom">
-            <div id="content-bottom-title">
-                <span>IT'S ME</span>
-                <span>잇츠미의원 스킨부스터 클리닉</span>
-                <p>잇츠미의원은 공인된 브랜드의 정품만을 취급하며 각 브랜드사의 가이드와<br>
-                    잇츠미의원만의 자체 임상 결과를 준수하여 개별화된 스킨부스터 시술을 시행합니다.</p>
-            </div>
+            <div id="content-bottom">
+                <div id="content-bottom-title">
+                    <span>IT'S ME</span>
+                    <span>잇츠미의원 스킨부스터 클리닉</span>
+                    <p>잇츠미의원은 공인된 브랜드의 정품만을 취급하며 각 브랜드사의 가이드와<br>
+                        잇츠미의원만의 자체 임상 결과를 준수하여 개별화된 스킨부스터 시술을 시행합니다.</p>
+                </div>
 
-            <div id="content-bottom-slide">
-                <div class="swiper1">
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide"><img src="image/slide-img/banner1.png" alt=""></div>
-                            <div class="swiper-slide"><img src="image/slide-img/banner2.png" alt=""></div>
-                            <div class="swiper-slide"><img src="image/slide-img/banner3.png" alt=""></div>
-                            <div class="swiper-slide"><img src="image/slide-img/banner4.png" alt=""></div>
+                <div id="content-bottom-slide">
+                    <div class="swiper1">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img src="image/slide-img/banner1.png" alt=""></div>
+                                <div class="swiper-slide"><img src="image/slide-img/banner2.png" alt=""></div>
+                                <div class="swiper-slide"><img src="image/slide-img/banner3.png" alt=""></div>
+                                <div class="swiper-slide"><img src="image/slide-img/banner4.png" alt=""></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                            <!-- If we need scrollbar -->
+                            <div class="swiper-scrollbar"></div>
                         </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
             </div>
@@ -268,5 +271,11 @@
         </footer>
     </div>
 </body>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+</script>
 
 </html>

@@ -1,0 +1,33 @@
+.swiper {
+  height: 1240px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-slide>img{
+  position: relative;
+  left:100px;
+  top:100px;
+}
+
+.sl1 {
+  background-image: url('../img/job01_bg.png');
+}
+.sl2 {
+  background-image: url('../img/job02_bg.png');
+}
+.sl3 {
+  background-image: url('../img/job03_bg.png');
+}
+.sl4 {
+  background-image: url('../img/job04_bg.png');
+}
+.sl5 {
+  background-image: url('../img/job05_bg.png');
+}
+.sl7 {
+  background-image: url('../img/job07_bg.png');
+}
