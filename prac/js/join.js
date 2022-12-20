@@ -9,7 +9,7 @@ const resetbtn = document.querySelector('.reset-btn');
 
 const cancelbtn = document.querySelector('.cancel-btn');
 
-const inputslot = document.getElementsByClassName('inputslot');
+var inputslot = document.getElementsByClassName('inputslot');
 
 var password1 = document.getElementById("pw1");
 

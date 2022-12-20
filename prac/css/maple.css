@@ -49,6 +49,14 @@ body {
   background-attachment: fixed;
 }
 
+#support{
+  width:1920px;
+  height: 1080px;
+  background-image: url('../img/supportbg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 #index>img{
   width:500px;
   height:auto;
