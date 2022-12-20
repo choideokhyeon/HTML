@@ -51,3 +51,16 @@ mainSelect.onchange = function () {
 }
 
 
+// 수정하기 버튼
+const resetbtn = document.querySelector('.reset-btn');
+
+var inputslot = document.getElementsByClassName('s-inputslot');
+
+resetbtn.addEventListener('click', function () {
+  alert('작성된 내용을 초기화 합니다');
+  for (let i = 0; i < inputslot.length; i++) {
+    console.log(inputslot[i]);
+    console.log(inputslot[i].value);
+    inputslot[i].value = null;
+  }
+})
