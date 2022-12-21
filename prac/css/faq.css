@@ -3,6 +3,7 @@
   width: 80%;
   height: 80%;
   opacity: 0.8;
+  overflow:auto;
   background-color: rgba(255,255,255,0.5);
   margin: auto;
 }
@@ -17,6 +18,7 @@ span{
   margin : 20px;
   font-weight: bold;
   height: 50px;
+  cursor: pointer;
 }
 
 .text>p{
@@ -26,6 +28,6 @@ span{
   display: none;
 }
 
-.subtext>.text:hover p{
-  display: block;
+.clicked>p{
+  display:block;
 }
