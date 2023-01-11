@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+  <!-- JQuery cdn -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="d1">HELLO WORLD1</div>
+  <div class="d2">HELLO WORLD2</div>
+  <div id="d3">HELLO WORLD3</div>
+  <div class="d4">HELLO WORLD4</div>
+
+  <script>
+    //1 노드 탐색
+    //JS
+    // const d1tg = document.querySelector(".d1");
+    // d1tg.style.backgroundColor = "orange";
+    //JQ
+    // $('.d2').css('background-color','green').css('color','white');
+    // $('#d3').css('background-color','black').css('color','red');
+
+
+    //2 노드 추가
+    //JS
+    const newd1 = document.createElement("div");
+    const d1tg = document.querySelector(".d1");
+    d1tg.innerHTML="<h4>HELL WORLD</h4>";
+    d1tg.append(newd1);
+
+    //JQ
+    $('.d2').append("<div>JQuery TEST</div>");
+    $('.d4').remove();
+
+
+  </script>
+</body>
+</html>
