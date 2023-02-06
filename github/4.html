@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="main.css">
+  <title>4. 로그인 인증 구현하기 </title>
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>4 로그인 인증 구현하기</h1>
+  <hr>
+  <p>1. 로그인 인증에 있어, 먼저 유저를 검색하기 위해 DAO에 Select를 만들어준다 <br>
+    <img src="img/4/A.png" alt="">
+  </p>
+  <p>2. 인증에 있어서 확인할 값을 받을 AuthDTO를 만들고<br>
+    Getter Setter, toString(), 디폴트생성자도 같이 정의해준다<br>
+    <img src="img/4/B.png" alt="">
+  </p>
+  <p>3. 로그인을 처리할 AuthService를 만들어준다.<br>
+    <img src="img/4/C.png" alt="">
+  </p>
+  <p>4. 로그인창에서 파라미터로 아이디와 비밀번호를 받아 일치여부를 확인하는 메서드 작성<br>
+    <img src="img/4/D.png" alt="">
+  </p>
+  <p>5. 로그아웃 구현<br>
+    <img src="img/4/E.png" alt="">
+  </p>
+  <p>6. FrontController에서 Login , Logout에 대해 컨트롤러 만들고 URI 연결시키기<br>
+    <img src="img/4/F.png" alt="">
+  </p>
+
+  <p>7. LoginController 작업하기 , 유효성검사(공백체크) 만들기<br>
+    <img src="img/4/G.png" alt=""><br>
+    <img src="img/4/G2.png" alt="">
+  </p>
+
+  <p>8. LogoutController 작업하기<br>
+    <img src="img/4/H.png" alt="">
+  </p>
+
+  <p>9. 아이디와 비밀번호를 입력받을 로그인페이지 만들기<br>
+    <img src="img/4/I.png" alt="">
+  </p>
+
+  <p>10. isValid함수로 유효성 검증을 하고 form을 login.do와 연결시킨다<br>
+    <img src="img/4/J.png" alt="">
+  </p>
+
+  <p>11. 로그아웃 체크를 위해 로그인 완료 후 이동되는 main.jsp에 로그아웃을 만들어준다<br>
+    <img src="img/4/K.png" alt="">
+  </p>
+
+  <p>12. 로그인과 로그아웃 테스트를 해본다<br>
+    <img src="img/4/L.png" alt=""><br>
+    <img src="img/4/L2.png" alt="">
+  </p>
+</body>

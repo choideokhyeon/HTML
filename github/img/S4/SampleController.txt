@@ -1,0 +1,42 @@
+@Controller
+public class SampleController {
+	
+	//Day0으로 들어오는 uri를 SampleController 받아서 처리함 
+	@RequestMapping("/Day0")
+	public void day0 (HttpServletRequest request, HttpServletResponse response) throws IOException
+	{
+	//01 파라미터 받아오기
+		int year = Integer.parseInt(request.getParameter("year"));
+		int month = Integer.parseInt(request.getParameter("month"));
+		int day = Integer.parseInt(request.getParameter("day"));
+		
+		
+	//02 파라미터를 날짜 형식으로 처리
+		Calendar cal = Calendar.getInstance();
+		cal.set(year, month-1, day);
+		
+		int dayofweek = cal.get(Calendar.DAY_OF_WEEK)-1;
+		char yoil = "일월화수목금토".charAt(dayofweek);
+		
+		
+	//03 출력
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
+		
+		//html문 구간
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<body>");
+		
+		out.println(year + "년<br>");
+		out.println(month + "월<br>");
+		out.println(day + "일<br>");
+		out.println(yoil + "요일 입니다.<br>");
+		
+		out.println("</body>");
+		out.println("</head>");
+		out.println("</html>");
+		
+	}
+}

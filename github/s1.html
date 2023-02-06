@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="main.css">
+  <title>s1. 스프링 기본 설치</title>
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>s1) 스프링 기본 설치</h1>
+  <hr>
+  <p>1. 기본적인 스프링 툴을 설치하러 간다<br>
+    java 11버전이 설치되어 있지않다면 설치 후 환경변수에 추가해준다<br><br>
+    <a href="https://download.springsource.com/release/STS/3.9.18.RELEASE/dist/e4.21/spring-tool-suite-3.9.18.RELEASE-e4.21.0-win32-x86_64.zip" style="color:red; background-color:black;">STS 3 설치</a>&nbsp;<a href="https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip" style="color:red; background-color:black;">jdk 11.0.2 설치</a><br>
+  </p>
+  <p>2. 압축을 풀고 sts-3.9.18.RELEASE의 STS를 실행시킨다.<br>
+    <img src="img/S1/A.png" alt="">
+  </p>
+  <p>3. Windows-Preferences로 들어가서 Files 인코더 형식을 UTF-8로 바꾸어준다<br>
+    <img src="img/S1/B.png" alt="">
+  </p>
+  <p>4. File-new-Spring Legacy Project를 새로 만들어준다<br>
+    <img src="img/S1/C.png" alt="">
+  </p>
+  <p>5. Configure templates에 들어가서 default 이외 모두 지워주고 대기한다<br>
+    <img src="img/S1/D.png" alt=""><br>
+    <img src="img/S1/E.png" alt="">
+  </p>
+  <p>6. 로딩이 완료되면 Spring MVC Project를 선택하여 프로젝트를 만든다<br>
+    <img src="img/S1/F.png" alt="">
+  </p>
+  <p>7. 임의의 패키지 이름을 설정하여 만들어 준다<br>
+    <img src="img/S1/G.png" alt="">
+  </p>
+  <p>8. 프로젝트가 완성되면 maven을 받아오기때문에 다운로드를 대기한다<br>
+    <img src="img/S1/H.png" alt="">
+  </p>
+
+  <p>9. Spring프로젝트를 Tomcat 9.0과 연결해준다<br>
+    <img src="img/S1/I.png" alt="">
+  </p>
+
+  <p>10. Tomcat 경로를 잡아준다<br>
+    <img src="img/S1/J.png" alt="">
+  </p>
+  <p>11. 기본적인 Tomcat의 포트를 8080이외로 설정해준다<br>
+    <img src="img/S1/K.png" alt="">
+  </p>
+  <p>12. 모듈로 진입하여 Web Module을 추가해준다.<br>
+    <img src="img/S1/L.png" alt="">
+  </p>
+  <p>13. 프로젝트를 마우스 우클릭하여 Properties에서 Servlet때와 똑같이 서버 설정해준다<br>
+    단 Spring은 java 하위버전에서 지원하지 않으므로 jdk11.0.2를 설치하고 11버전 사용<br>
+    <img src="img/S1/M.png" alt="">
+  </p>
+  <p>14. 마지막으로 임의의 jsp 파일을 만들어서 정상작동을 확인한다<br></p>
+</body>

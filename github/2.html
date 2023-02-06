@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="main.css">
+  <title>2. 기본 라이브러리 추가, 컨트롤러 만들고 jsp 연결하기</title>
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>2 기본 라이브러리 추가, 컨트롤러 만들고 jsp 연결하기</h1>
+  <hr>
+  <p>1.프로젝트 마우스 우클릭 - Java EE tools - Generate Deployment Descriptor Stub 클릭<br>
+    <img src="img/2/a.png" alt="">
+  </p>
+  <p>2. MySql 홈페이지에서 받은 JDBC jar 파일(JDBC 전용)과 DBCP를 위한<br>
+    collections4-4.4.jar , dbcp2-2.9.0.jar파일과 pool2-2.11.1.jar파일을 WEB-INF/lib 폴더안에 넣어줌<br><br>
+    <a href="https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-8.0.31.zip" style="color:red; background-color: black;">MYSQL JDBC 다운로드</a><br><br>
+    *DBCP 파일은 3번 설명에 링크 포함되어 있음*<br>
+    <img src="img/2/b.png" alt="">
+  </p>
+  <p>3.기본적으로 구현할 뷰 페이지들을 임시로 만들어줌<br>
+    <img src="img/2/c.png" alt="">
+  </p>
+  <p>4. WEB-INF에 접근하기 위한 컨트롤러들과 패키지를 만들어줌<br>
+    <img src="img/2/d.png" alt="">
+  </p>
+  <p>5. FrontController에 HttpServlet을 상속받게 해줌<br>
+    <img src="img/2/e.png" alt="">
+  </p>
+  <p>6. FrontController에 Alt+Shift+S키를 눌러 Override/Implement Methods에 들어가서<br>
+    init(config)와 Service를 만들어줌<br>
+    <img src="img/2/f.png" alt="">
+  </p>
+  <p>7. 주소로 받을 String과 그걸 작동시킬 SubController를 받는 Map리스트를 만듬<br>
+    <img src="img/2/g.png" alt="">
+  </p>
+  <p>8. Map List에 URI와 서브컨트롤러를 연결시킨다.<br>
+    <img src="img/2/h.png" alt="">
+  </p>
+  <p>9. Service파트에 SubController가 작동할 수 있게 연결시켜준다<br>
+    <img src="img/2/i.png" alt="">
+  </p>
+  <p>10. SubController에 execute를 만들어준다.<br>
+    <img src="img/2/j.png" alt="">
+  </p>
+  <p>11. 위에서 만들었던 나머지 Controller들도 클래스를 만들어준다<br>
+    <img src="img/2/k.png" alt="">
+  </p>
+  <p>12. 각 컨트롤러마다 해당 URI에 접속시에 접근할 jsp파일을 연결해준다<br>
+    <img src="img/2/l.png" alt="">
+  </p>
+  <p>13. WEB-INF의 web.xml 파일을 열어 FrontController의 .do URI들이<br>
+    FrontController를 거쳐갈 수 있도록 Mapping을 해준다.<br>
+    <img src="img/2/m.png" alt="">
+  </p>
+  <p>14. FrontController에서 만든 URI경로들이 잘 작동하는지 체크한다<br>
+    <img src="img/2/n.png" alt="">
+  </p>
+</body>

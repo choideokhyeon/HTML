@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="main.css">
+  <title>3. 회원가입 폼, MySQL 테이블 만들어 DAO,DTO 연결하기 </title>
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>3 회원가입 폼, MySQL 테이블 만들어 DAO,DTO 연결하기</h1>
+  <hr>
+  <p>1. 회원가입 폼을 만들기전에 sql파일을 만들어 테이블을 만들 sql문을 작성한다<br>
+    <img src="img/3/1.png" alt="">
+  </p>
+  <p>2. 만든 sql문을 MySQL에서 실행시켜준다<br>
+    <img src="img/3/2.png" alt="">
+  </p>
+  <p>3. 테이블의 컬럼값에 맞게 자바에서 DTO파일을 만들어 객체를 생성해준다<br>
+    <img src="img/3/3.png" alt="">
+  </p>
+  <p>4. Alt+Shift+S를 눌러 Getter Setter , toString() , 디폴트생성자를 만들어준다<br>
+    <img src="img/3/4.png" alt="">
+  </p>
+  <p>5. DBCP연결을 위해 관련 jar 라이브러리를 받아와서 lib에 추가해준다<br><br>
+    <a href="https://dlcdn.apache.org//commons/dbcp/binaries/commons-dbcp2-2.9.0-bin.zip" style="color:red; background-color: black;">DBCP</a>&nbsp;
+    <a href="https://dlcdn.apache.org//commons/collections/binaries/commons-collections4-4.4-bin.zip" style="color:red; background-color: black;">Collections</a>&nbsp;
+    <a href="https://dlcdn.apache.org//commons/pool/binaries/commons-pool2-2.11.1-bin.zip" style="color:red; background-color: black;">pool</a><br><br>
+    <img src="img/3/5.png" alt="">
+  </p>
+  <p>6. web.xml파일을 열어 jdbc Resource를 추가해준다<br>
+    <img src="img/3/6.png" alt="">
+  </p>
+  <p>7. Tomcat Server의 context.xml과 server.xml에 jdbc를 연결시켜준다<br>
+    server.xml의 경우 Resource부분을 바꾸어 주어야 한다<br>
+    <img src="img/3/7-1.png" alt=""><br>
+    <img src="img/3/7-2.png" alt=""><br>
+  </p>
+  <p>8. DAO클래스를 만들어 기본 생성자 안에 DB와 연결시켜준다<br>
+    <img src="img/3/8.png" alt="">
+  </p>
+  <p>9. 회원가입 폼을 만들어 내용을 받을 수 있도록 한다<br>
+    <img src="img/3/9.png" alt="">
+  </p>
+  <p>10. isValid함수를 만들어 유효성 검증을 하고 form을 join.do와 연결시켜준다.<br>
+    <img src="img/3/10-1.png" alt=""><br>
+    <img src="img/3/10-2.png" alt="">
+  </p>
+  <p>11. DAO에서 테이블로 데이터를 넣을 수 있게 INSERT를 만들어준다<br>
+    <img src="img/3/11.png" alt="">
+  </p>
+  <p>12. Service 클래스를 만들어서 DAO에 대한 작업을 받아올 수 있게 한다.<br>
+    <img src="img/3/12.png" alt="">
+  </p>
+  <p>13. 회원가입 폼으로부터 내용을 받아올 수 있도록 컨트롤러를 작성하여 Service에 넣어준다<br>
+    <img src="img/3/13-1.png" alt=""><br>
+    <img src="img/3/13-2.png" alt=""><br>
+    <img src="img/3/13-3.png" alt="">
+  </p>
+  <p>14. 서버를 작동시켜서 데이터가 테이블로 정상적으로 insert 되는지 확인하자<br>
+    <img src="img/3/14-1.png" alt=""><br>
+    <img src="img/3/14-2.png" alt=""><br>
+    <img src="img/3/14-3.png" alt="">
+  </p>
+</body>

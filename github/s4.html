@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="main.css">
+  <title>s4) MVC 패턴</title>
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>s4. MVC 패턴</h1>
+  <p>1.MVC 패턴을 구현하기 위해 기본 패키지에 SampleController 클래스를 하나 만들어준다<br>
+    <img src="img/S4/A.png" alt="">
+  </p>
+  <p>2-1. 간단한 예제로 요일을 출력하는 컨트롤러를 만들어보자<br><br>
+    <a href="img/S4/SampleController.txt" style="color:red; background-color: black;">소스 원문 텍스트 파일</a><br><br>
+    <img src="img/S4/B.png" alt="">
+    <div style="border: 1px solid #000; width:650px; margin-left: 50px;">
+      @RequestMapping이란?<br>
+      -특정 uri로 요청을 보내면 Controller가 받아서 처리를 하는데 이 요청을 매핑하기 위해 사용함<br>
+      -value : 요청받을 url 설정<br>
+      -method : 어떤 요청으로 받을지 정의(GET, POST, PUT, DELETE 등)
+    </div>
+  </p>
+  <p>2-2. 2번에서 만든 컨트롤러를 파라미터값을 받아 테스트 해본다<br>
+    컨트롤러를 만들때 해당 컨트롤러를 출력할 jsp파일도 WEB-INF/views 폴더에 같이 만들어줘야한다<br>
+    <span style="background-color: yellow;">localhost:포트번호/RequestMapping 에서 설정한 이름?파라미터1=값&파라미터2=값.. 형태로 접속</span><br>
+    *만약 톰캣에서 지정한 기본경로가 있다면 포트번호 뒤에 /경로명을 넣어줘야 한다<br><br>
+    예시)localhost:8090/Day0?year=2023&month=2&day=1<br><br>
+    <img src="img/S4/C.png" alt="">
+  </p>
+  <p>3-1. 파라미터값을 인자로 받는 경우<br>
+    마찬가지로 jsp파일도 RequestMapping에 맞게 또 만들어준다<br>
+    <img src="img/S4/D.png" alt="">
+  </p>
+  <p>3-2. 아까 만든 컨트롤러도 2번과 동일하게 접속해주고 확인해보자<br>
+    <img src="img/S4/E.png" alt="">
+  </p>
+  <p>4-1. 파라미터값을 인자로 받아 jsp 경로로 리턴하는 경우<br>
+    <img src="img/S4/F1.png" alt=""><br>
+    <img src="img/S4/F2.png" alt="">
+  </p>
+  <p>4-2. @Log4j 어노테이션으로 로그를 통해 콘솔창에서 확인하자<br>
+    <img src="img/S4/G.png" alt="">
+  </p>
+  <p>5-1. 파라미터값을 인자로 받고 그걸 jsp로 보내기위해 Model을 사용한다<br>
+    jsp파일에서 EL태그($)를 사용하기 위해 JSTL CDN을 받아온다<br><br>
+    <a href="img/S4/JSTL CDN.txt" style="color:red; background-color: black;">JSTL CDN 텍스트 파일</a><br><br>
+    <img src="img/S4/H1.png" alt=""><br>
+    <img src="img/S4/H2.png" alt="">
+  </p>
+  <p>5-2. 서버를 열어서 잘 들어갔는지 확인해보자<br>
+    <img src="img/S4/I.png" alt="">
+  </p>
+  <p>5-3. 리턴값과 jsp파일을 하위경로에 넣어주어도 정상적으로 작동한다<br>
+    <img src="img/S4/J1.png" alt=""><br>
+    <img src="img/S4/J2.png" alt=""><br>
+    <img src="img/S4/J3.png" alt="">
+  </p>
+  <p>6-1. 파라미터값을 DTO로 받아서 만들어 주는 경우(5번과 같음)<br>
+    인자로 받는 연월일 값을 DTO파일을 만들어서 만들어주고 어노테이션도 같이 선언<br>
+    jsp파일에서도 EL태그($)에 들어가는 값을 dto에서 받아오도록 변경<br>
+    <img src="img/S4/K1.png" alt=""><br>
+    <img src="img/S4/K2.png" alt=""><br>
+    <img src="img/S4/K3.png" alt="">
+  </p>
+  <p>6-2. 서버를 열어서 마찬가지로 잘 들어갔는지 확인해보자<br>
+    <img src="img/S4/M.png" alt=""><br>
+  </p>
+</body>
